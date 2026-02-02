@@ -27,7 +27,29 @@
     <p-button data-test="change-me" label="Large" severity="primary" size="large"></p-button>
   </section>
 
-  <h3 class="section-sub-title">Regular button（with PrimeNG icon）</h3>
+  <h3 class="section-sub-title">Pure text button</h3>
+  <div class="button-section">
+    <p-button data-test="change-me" label="Primary" variant="text" severity="primary" />
+    <p-button data-test="change-me" label="Secondary" variant="text" severity="secondary" />
+    <p-button data-test="change-me" label="Warn" variant="text" severity="warn" />
+    <p-button data-test="change-me" label="Danger" variant="text" severity="danger" />
+    <p-button data-test="change-me" label="Disabled" variant="text" severity="primary" disabled />
+    <p-button data-test="change-me" label="Small" variant="text" severity="primary" size="small" />
+    <p-button data-test="change-me" label="Large" variant="text" severity="primary" size="large" />
+  </div>
+
+  <h3 class="section-sub-title">Pure text button with normal font weight</h3>
+  <div class="button-section">
+    <p-button data-test="change-me" variant="text" severity="primary">Primary</p-button>
+    <p-button data-test="change-me" variant="text" severity="secondary">Secondary</p-button>
+    <p-button data-test="change-me" variant="text" severity="warn">Warn</p-button>
+    <p-button data-test="change-me" variant="text" severity="danger">Danger</p-button>
+    <p-button data-test="change-me" variant="text" severity="primary" disabled>Disabled</p-button>
+    <p-button data-test="change-me" variant="text" severity="primary" size="small">Small</p-button>
+    <p-button data-test="change-me" variant="text" severity="primary" size="large">Large</p-button>
+  </div>
+
+  <h3 class="section-sub-title">Regular button with PrimeNG icon</h3>
   <section class="button-section">
     <p-button data-test="change-me" icon="pi pi-home" label="Primary" severity="primary"></p-button>
     <p-button data-test="change-me" icon="pi pi-home" label="Secondary" severity="secondary"></p-button>
@@ -36,31 +58,6 @@
     <p-button data-test="change-me" icon="pi pi-home" label="Diabled" severity="primary" [disabled]="true"></p-button>
     <p-button data-test="change-me" icon="pi pi-home" label="Small" severity="primary" size="small"></p-button>
     <p-button data-test="change-me" icon="pi pi-home" label="Large" severity="primary" size="large"></p-button>
-  </section>
-
-  <h3 class="section-sub-title">Regular button（with SVG icon）</h3>
-  <section class="button-section">
-    <p-button data-test="change-me" severity="primary" label="Primary">
-      <app-icon icon="box"></app-icon>
-    </p-button>
-    <p-button data-test="change-me" severity="secondary" label="Secondary">
-      <app-icon icon="box"></app-icon>
-    </p-button>
-    <p-button data-test="change-me" severity="warn" label="Warn">
-      <app-icon icon="box"></app-icon>
-    </p-button>
-    <p-button data-test="change-me" severity="danger" label="Danger">
-      <app-icon icon="box"></app-icon>
-    </p-button>
-    <p-button data-test="change-me" severity="primary" label="Disabled" disabled>
-      <app-icon icon="box"></app-icon>
-    </p-button>
-    <p-button data-test="change-me" severity="primary" size="small" label="Small">
-      <app-icon icon="box"></app-icon>
-    </p-button>
-    <p-button data-test="change-me" severity="primary" size="large" label="Large">
-      <app-icon icon="box"></app-icon>
-    </p-button>
   </section>
 
   <h3 class="section-sub-title">Pure icon button with PrimeNG icon</h3>
@@ -93,6 +90,72 @@
       <p-button data-test="change-me" icon="pi pi-home" [text]="true" severity="primary" size="large" />
       Large
     </div>
+
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" [text]="true" severity="primary" [rounded]="true" />
+      Rounded
+    </div>
+  </section>
+
+  <h3 class="section-sub-title">Pure icon button with PrimeNG icon and with background color</h3>
+  <section class="button-section">
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" severity="primary" />
+      Primary
+    </div>
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" severity="secondary" />
+      Secondary
+    </div>
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" severity="warn" />
+      Warn
+    </div>
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" severity="danger" />
+      Danger
+    </div>
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" severity="primary" [disabled]="true" />
+      Disabled
+    </div>
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" severity="primary" size="small" />
+      Small
+    </div>
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" severity="primary" size="large" />
+      Large
+    </div>
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" severity="primary" [rounded]="true" />
+      Rounded
+    </div>
+  </section>
+
+  <h3 class="section-sub-title">Regular button with SVG icon</h3>
+  <section class="button-section">
+    <p-button data-test="change-me" severity="primary" label="Primary">
+      <app-icon icon="box"></app-icon>
+    </p-button>
+    <p-button data-test="change-me" severity="secondary" label="Secondary">
+      <app-icon icon="box"></app-icon>
+    </p-button>
+    <p-button data-test="change-me" severity="warn" label="Warn">
+      <app-icon icon="box"></app-icon>
+    </p-button>
+    <p-button data-test="change-me" severity="danger" label="Danger">
+      <app-icon icon="box"></app-icon>
+    </p-button>
+    <p-button data-test="change-me" severity="primary" label="Disabled" disabled>
+      <app-icon icon="box"></app-icon>
+    </p-button>
+    <p-button data-test="change-me" severity="primary" size="small" label="Small">
+      <app-icon icon="box"></app-icon>
+    </p-button>
+    <p-button data-test="change-me" severity="primary" size="large" label="Large">
+      <app-icon icon="box"></app-icon>
+    </p-button>
   </section>
 
   <h3 class="section-sub-title">Pure icon button with SVG icon</h3>
@@ -139,39 +202,14 @@
       </p-button>
       Large
     </div>
+    <div class="button-card">
+      <p-button data-test="change-me" [text]="true" severity="primary" [rounded]="true">
+        <app-icon icon="box"></app-icon>
+      </p-button>
+      Rounded
+    </div>
   </section>
 
-  <h3 class="section-sub-title">Pure icon button with PrimeNG icon and with background color</h3>
-  <section class="button-section">
-    <div class="button-card">
-      <p-button data-test="change-me" icon="pi pi-home" severity="primary" />
-      Primary
-    </div>
-    <div class="button-card">
-      <p-button data-test="change-me" icon="pi pi-home" severity="secondary" />
-      Secondary
-    </div>
-    <div class="button-card">
-      <p-button data-test="change-me" icon="pi pi-home" severity="warn" />
-      Warn
-    </div>
-    <div class="button-card">
-      <p-button data-test="change-me" icon="pi pi-home" severity="danger" />
-      Danger
-    </div>
-    <div class="button-card">
-      <p-button data-test="change-me" icon="pi pi-home" severity="primary" [disabled]="true" />
-      Disabled
-    </div>
-    <div class="button-card">
-      <p-button data-test="change-me" icon="pi pi-home" severity="primary" size="small" />
-      Small
-    </div>
-    <div class="button-card">
-      <p-button data-test="change-me" icon="pi pi-home" severity="primary" size="large" />
-      Large
-    </div>
-  </section>
   <h3 class="section-sub-title">Pure icon button with SVG icon and with background color</h3>
   <section class="button-section">
     <div class="button-card">
@@ -216,18 +254,13 @@
       </p-button>
       Large
     </div>
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi" severity="primary" [rounded]="true">
+        <app-icon icon="box"></app-icon>
+      </p-button>
+      Rounded
+    </div>
   </section>
-
-  <h3 class="section-sub-title">Pure text button</h3>
-  <div class="button-section">
-    <p-button data-test="change-me" label="Primary" variant="text" severity="primary" />
-    <p-button data-test="change-me" label="Secondary" variant="text" severity="secondary" />
-    <p-button data-test="change-me" label="Warn" variant="text" severity="warn" />
-    <p-button data-test="change-me" label="Danger" variant="text" severity="danger" />
-    <p-button data-test="change-me" label="Disabled" variant="text" severity="primary" disabled />
-    <p-button data-test="change-me" label="Small" variant="text" severity="primary" size="small" />
-    <p-button data-test="change-me" label="Large" variant="text" severity="primary" size="large" />
-  </div>
 
   <h1 class="section-title">Primary theme color</h1>
   <section class="common-color-section">
