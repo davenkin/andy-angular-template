@@ -72,6 +72,24 @@ export const PRIMENG_COMPONENTS = {
             color: 'var(--error-color)',
           },
         },
+        outlined: {
+          primary: {
+            color: 'var(--primary-color)',
+            borderColor: 'var(--primary-color)',
+          },
+          secondary: {
+            color: 'var(--secondary-text-color)',
+            borderColor: 'var(--secondary-text-color)',
+          },
+          warn: {
+            color: 'var(--warn-color)',
+            borderColor: 'var(--warn-color)',
+          },
+          danger: {
+            color: 'var(--error-color)',
+            borderColor: 'var(--error-color)',
+          },
+        },
       },
     },
   },

@@ -9,8 +9,14 @@ p-button {
   }
 
   // disabled regular buttons
-  button.p-button:not(.p-button-text):not(.p-button-icon-only):disabled {
+  button.p-button:not(.p-button-text):not(.p-button-icon-only):not(.p-button-outlined):disabled {
     background: var(--gray-500);
+    border-color: var(--gray-500);
+  }
+
+  // outlined button (disabled)
+  button.p-button.p-button-outlined:disabled {
+    color: var(--gray-500);
     border-color: var(--gray-500);
   }
 
