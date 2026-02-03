@@ -25,6 +25,7 @@
     <p-button data-test="change-me" label="Disabled" severity="danger" [disabled]="true"></p-button>
     <p-button data-test="change-me" label="Small" severity="primary" size="small"></p-button>
     <p-button data-test="change-me" label="Large" severity="primary" size="large"></p-button>
+    <p-button data-test="change-me" label="Raised" severity="primary" [raised]="true"></p-button>
   </section>
 
   <h3 class="section-sub-title">Outlined Button</h3>
@@ -36,6 +37,7 @@
     <p-button data-test="change-me" label="Disabled" severity="primary" [disabled]="true" variant="outlined"></p-button>
     <p-button data-test="change-me" label="Small" severity="primary" size="small" variant="outlined"></p-button>
     <p-button data-test="change-me" label="Large" severity="primary" size="large" variant="outlined"></p-button>
+    <p-button data-test="change-me" label="Raised" severity="primary" variant="outlined" [raised]="true"></p-button>
   </section>
 
   <h3 class="section-sub-title">Pure text button</h3>
@@ -47,6 +49,7 @@
     <p-button data-test="change-me" label="Disabled" variant="text" severity="primary" disabled />
     <p-button data-test="change-me" label="Small" variant="text" severity="primary" size="small" />
     <p-button data-test="change-me" label="Large" variant="text" severity="primary" size="large" />
+    <p-button data-test="change-me" label="Raised" variant="text" severity="primary" [raised]="true" />
   </div>
 
   <h3 class="section-sub-title">Pure text button with normal font weight</h3>
@@ -58,6 +61,7 @@
     <p-button data-test="change-me" variant="text" severity="primary" disabled>Disabled</p-button>
     <p-button data-test="change-me" variant="text" severity="primary" size="small">Small</p-button>
     <p-button data-test="change-me" variant="text" severity="primary" size="large">Large</p-button>
+    <p-button data-test="change-me" variant="text" severity="primary" [raised]="true">Raised</p-button>
   </div>
 
   <h1 class="section-title">PrimeNG icon Button</h1>
@@ -70,6 +74,7 @@
     <p-button data-test="change-me" icon="pi pi-home" label="Diabled" severity="primary" [disabled]="true"></p-button>
     <p-button data-test="change-me" icon="pi pi-home" label="Small" severity="primary" size="small"></p-button>
     <p-button data-test="change-me" icon="pi pi-home" label="Large" severity="primary" size="large"></p-button>
+    <p-button data-test="change-me" icon="pi pi-home" label="Raised" severity="primary" [raised]="true"></p-button>
   </section>
 
   <h3 class="section-sub-title">Outlined button with PrimeNG icon</h3>
@@ -107,6 +112,14 @@
       severity="primary"
       size="large"
       variant="outlined"
+    ></p-button>
+    <p-button
+      data-test="change-me"
+      icon="pi pi-home"
+      label="Raised"
+      severity="primary"
+      variant="outlined"
+      [raised]="true"
     ></p-button>
   </section>
 
@@ -178,8 +191,16 @@
       Large
     </div>
     <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" severity="primary" [outlined]="true" />
+      Outlined
+    </div>
+    <div class="button-card">
       <p-button data-test="change-me" icon="pi pi-home" severity="primary" [rounded]="true" />
       Rounded
+    </div>
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi pi-home" severity="primary" [rounded]="true" [outlined]="true" />
+      Rounded Outlined
     </div>
   </section>
 
@@ -207,6 +228,9 @@
     <p-button data-test="change-me" severity="primary" size="large" label="Large">
       <app-icon icon="box"></app-icon>
     </p-button>
+    <p-button data-test="change-me" severity="primary" label="Raised" [raised]="true">
+      <app-icon icon="box"></app-icon>
+    </p-button>
   </section>
 
   <h3 class="section-sub-title">Outlined button with SVG icon</h3>
@@ -230,6 +254,9 @@
       <app-icon icon="box"></app-icon>
     </p-button>
     <p-button data-test="change-me" severity="primary" size="large" label="Large" variant="outlined">
+      <app-icon icon="box"></app-icon>
+    </p-button>
+    <p-button data-test="change-me" severity="primary" label="Raised" variant="outlined" [raised]="true">
       <app-icon icon="box"></app-icon>
     </p-button>
   </section>
@@ -331,10 +358,22 @@
       Large
     </div>
     <div class="button-card">
+      <p-button data-test="change-me" icon="pi" severity="primary" [outlined]="true">
+        <app-icon icon="box"></app-icon>
+      </p-button>
+      Outlined
+    </div>
+    <div class="button-card">
       <p-button data-test="change-me" icon="pi" severity="primary" [rounded]="true">
         <app-icon icon="box"></app-icon>
       </p-button>
       Rounded
+    </div>
+    <div class="button-card">
+      <p-button data-test="change-me" icon="pi" severity="primary" [rounded]="true" [outlined]="true">
+        <app-icon icon="box"></app-icon>
+      </p-button>
+      Outlined
     </div>
   </section>
 
