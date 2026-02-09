@@ -80,6 +80,18 @@ a.p-button {
 
 // button with <app-icon> inside
 p-button {
+  button.p-button app-icon {
+    font-size: var(--18px);
+  }
+
+  button.p-button.p-button-sm app-icon {
+    font-size: var(--16px);
+  }
+
+  button.p-button.p-button-lg app-icon {
+    font-size: var(--20px);
+  }
+
   button.p-button.p-button-text:not(.p-button-icon-only):has(app-icon) {
     width: var(--medium-control-height);
     height: var(--medium-control-height);

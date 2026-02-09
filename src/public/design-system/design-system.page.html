@@ -550,17 +550,17 @@
   <h3 class="section-sub-title">SVG icon color</h3>
   <div class="icon-section">
     <div class="icon-item">
-      <app-icon icon="box"></app-icon>
+      <app-icon icon="box" class="u-font-size-18"></app-icon>
       <div>Default color</div>
     </div>
 
     <div class="icon-item">
-      <app-icon icon="box" class="colored-icon-blue"></app-icon>
+      <app-icon icon="box" class="colored-icon-blue u-font-size-18"></app-icon>
       <div>Primary blue</div>
     </div>
 
     <div class="icon-item">
-      <app-icon icon="box" class="colored-icon-red"></app-icon>
+      <app-icon icon="box" class="colored-icon-red u-font-size-18"></app-icon>
       <div>Danger red</div>
     </div>
   </div>
@@ -578,8 +578,18 @@
     </div>
 
     <div class="icon-item">
+      <app-icon icon="box" class="u-font-size-18"></app-icon>
+      <div>var(--18px)</div>
+    </div>
+
+    <div class="icon-item">
       <app-icon icon="box" class="u-font-size-20"></app-icon>
       <div>var(--20px)</div>
+    </div>
+
+    <div class="icon-item">
+      <app-icon icon="box" class="u-font-size-24"></app-icon>
+      <div>var(--24px)</div>
     </div>
   </div>
 
@@ -587,8 +597,21 @@
   <section class="icon-section">
     @for (icon of allIcons; track icon) {
     <div class="icon-item">
-      <app-icon [icon]="icon"></app-icon>
+      <app-icon [icon]="icon" class="u-font-size-18"></app-icon>
       <div>{{ icon }}</div>
+      <div>default</div>
+    </div>
+
+    <div class="icon-item">
+      <app-icon [icon]="icon" class="colored-icon-blue u-font-size-18"></app-icon>
+      <div>{{ icon }}</div>
+      <div>colored</div>
+    </div>
+
+    <div class="icon-item">
+      <app-icon [icon]="icon" class="u-font-size-24"></app-icon>
+      <div>{{ icon }}</div>
+      <div>u-font-size-24</div>
     </div>
     }
   </section>
