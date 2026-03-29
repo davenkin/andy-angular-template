@@ -15,7 +15,7 @@ export class DemoDialogComponent {
   private dialogRef = inject(DynamicDialogRef);
 
   protected cancel() {
-    this.dialogRef.close(DialogCloseResult.CANCELLED);
+    this.dialogRef.close();
   }
 
   protected save() {

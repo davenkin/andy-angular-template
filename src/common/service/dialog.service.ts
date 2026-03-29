@@ -10,12 +10,10 @@ export interface DialogSetting {
   header: string;
   size?: DialogSize;
   data?: any;
+  inputValues?: Record<string, any>;
 }
 
 export enum DialogCloseResult {
-  CREATED = 'CREATED',
-  UPDATED = 'UPDATED',
-  CANCELLED = 'CANCELLED',
   SUCCEED = 'SUCCEED',
   FAILED = 'FAILED',
 }
@@ -30,17 +28,17 @@ export class DialogService {
 
   public open(component: any, setting: DialogSetting): DynamicDialogRef {
     this.focusService.push();
-    const width: string = this.widthOfSize(setting.size);
     const dialogRef = this.primeDialogService.open(component, {
       header: setting.header,
       modal: true,
       closable: true,
       closeOnEscape: true,
       closeAriaLabel: this.translate.instant('CLOSE_DIALOG'),
-      width: width,
+      width: this.widthOfSize(setting.size),
       data: setting.data,
+      inputValues: setting.inputValues,
     }) as DynamicDialogRef;
-    dialogRef.onClose.pipe(take(1)).subscribe(() => this.focusService.pop());
+    dialogRef.onDestroy.pipe(take(1)).subscribe(() => this.focusService.pop());
     return dialogRef;
   }
 
