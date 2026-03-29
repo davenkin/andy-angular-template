@@ -124,8 +124,8 @@ export class DesignSystemPage {
     const dialogRef = this.dialogService.open(DemoDialogComponent, {
       header: 'Dialog',
       size: size,
-      data: {
-        message: 'This is passed in data',
+      inputValues: {
+        someInputValue: 'This is some input value',
       },
     });
     dialogRef.onClose.pipe(take(1)).subscribe((result) => {

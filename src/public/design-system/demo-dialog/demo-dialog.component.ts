@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { Component, inject, input } from '@angular/core';
+import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Button } from 'primeng/button';
 import { DialogCloseResult } from 'common/service/dialog.service';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -11,8 +11,8 @@ import { TranslatePipe } from '@ngx-translate/core';
   imports: [Button, TranslatePipe],
 })
 export class DemoDialogComponent {
-  protected dialogConfig = inject(DynamicDialogConfig);
   private dialogRef = inject(DynamicDialogRef);
+  someInputValue = input<string | null>(null);
 
   protected cancel() {
     this.dialogRef.close();
