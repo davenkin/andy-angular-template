@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { TableLazyLoadEvent, TableModule } from 'primeng/table';
 import {
   DemoDeviceApi,
@@ -45,7 +45,7 @@ export class DemoDeviceListPage implements OnInit {
   private spinner = inject(SpinnerService);
   protected selectedOsType = ALL;
   protected selectedCpuArchitectureType = ALL;
-  protected devices: QListedDemoDevice[] = [];
+  protected devices = signal<QListedDemoDevice[]>([]);
   protected totalElements = 0;
   protected selectedDevices: QListedDemoDevice[] = [];
   protected query: ListDemoDevicesQuery = {
@@ -95,7 +95,7 @@ export class DemoDeviceListPage implements OnInit {
         }),
       )
       .subscribe((response) => {
-        this.devices = response.content;
+        this.devices.set(response.content);
         this.totalElements = response.totalElements;
         this.selectedDevices = [];
       });

@@ -39,7 +39,7 @@ export class DialogService {
       closeAriaLabel: this.translate.instant('CLOSE_DIALOG'),
       width: width,
       data: setting.data,
-    });
+    }) as DynamicDialogRef;
     dialogRef.onClose.pipe(take(1)).subscribe(() => this.focusService.pop());
     return dialogRef;
   }

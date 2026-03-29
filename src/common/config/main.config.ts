@@ -1,13 +1,7 @@
-import {
-  ApplicationConfig,
-  importProvidersFrom,
-  provideBrowserGlobalErrorListeners,
-  provideZoneChangeDetection,
-} from '@angular/core';
+import { ApplicationConfig, importProvidersFrom, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from 'common/config/route.config';
 import { providePrimeNG } from 'primeng/config';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { includeBearerTokenInterceptor, provideKeycloak } from 'common/config/auth.config';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { apiResponseErrorInterceptor } from './error.config';
@@ -20,9 +14,7 @@ import { provideI18n } from 'common/config/i18n.config';
 export const applicationConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideAnimationsAsync(),
     providePrimeNG({
       theme: {
         preset: PRIMENG_PRESET,
