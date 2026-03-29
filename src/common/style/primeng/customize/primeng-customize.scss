@@ -2,7 +2,7 @@
 // When customize, you should follow the following steps:
 //    1. Customize PrimeNG's preset in file `primeng-components.ts`
 //    2. If step 1 cannot meet your requirement, try customize PrimeNG's own CSS selectors in the component's own customize files such as `primeng/customize/p-button.scss` for <p-button>
-//    3. If step 2 cannot meet your requirement, try add your own CSS selectors in the component's own customize files such as `primeng/customize/p-button.scss`, prefix your own selector with 'cp' which means 'Customize PrimeNG', such as `cp-confirmation-success`
+//    3. If step 2 cannot meet your requirement, try add your own CSS selectors in the component's own customize files such as `primeng/customize/p-button.scss`, prefix your own selector with 'cp' which means 'Customize PrimeNG', such as `cp-dialog-content`
 
 @use './p-button';
 @use './p-confirmdialog';

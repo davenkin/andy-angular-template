@@ -17,23 +17,3 @@
     gap: var(--15px);
   }
 }
-
-.p-confirmdialog {
-  &:has(.cp-confirmation-success) {
-    .p-dialog-title {
-      color: var(--success-color);
-    }
-  }
-
-  &:has(.cp-confirmation-danger) {
-    .p-dialog-title {
-      color: var(--error-color);
-    }
-  }
-
-  &:has(.cp-confirmation-warn) {
-    .p-dialog-title {
-      color: var(--warn-color);
-    }
-  }
-}

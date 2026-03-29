@@ -29,7 +29,6 @@ export class ConfirmService {
     this.confirmationService.confirm({
       message: confirmation.message,
       header: confirmation.header,
-      icon: this.iconFor(confirmation.severity ?? 'primary'),
       rejectButtonProps: {
         label: confirmation.rejectButtonText ?? this.translate.instant('CANCEL'),
         severity: confirmation.rejectButtonSeverity ?? 'secondary',
@@ -47,22 +46,5 @@ export class ConfirmService {
         confirmation.reject?.();
       },
     });
-  }
-
-  private iconFor(severity: ConfirmationSeverity) {
-    switch (severity) {
-      case 'primary': {
-        return 'pi pi-info-circle cp-confirmation-primary';
-      }
-      case 'success': {
-        return 'pi pi-info-circle cp-confirmation-success';
-      }
-      case 'warn': {
-        return 'pi pi-exclamation-triangle cp-confirmation-warn';
-      }
-      case 'danger': {
-        return 'pi pi-info-circle cp-confirmation-danger';
-      }
-    }
   }
 }
