@@ -7,8 +7,8 @@ import {
   provideAppInitializer,
 } from '@angular/core';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
-import zhTranslation from '../../../public/i18n/zh.json';
-import enTranslation from '../../../public/i18n/en.json';
+import zhTranslation from 'common/config/i18n/zh.json';
+import enTranslation from 'common/config/i18n/en.json';
 import { CurrentContextService } from 'common/service/current-context.service';
 import localeZh from '@angular/common/locales/zh';
 import { registerLocaleData } from '@angular/common';

@@ -4,8 +4,8 @@ import { CurrentContextService } from 'common/service/current-context.service';
 import { CpuArchitecture, Option, OsType } from 'common/model/common.model';
 import { ALL } from 'common/config/constant';
 
-export const OS_TYPE_NAMES: Map<string, string> = new Map<string, string>();
-export const CPU_ARCHITECTURE_NAMES: Map<string, string> = new Map<string, string>();
+export const OS_TYPE_NAMES = new Map<OsType, string>();
+export const CPU_ARCHITECTURE_NAMES = new Map<CpuArchitecture, string>();
 
 @Injectable({
   providedIn: 'root',
