@@ -27,3 +27,4 @@ You put data models in 2 places:
 - For common/shared models, put them in `common/model` folder, such as `OsType` and `CpuArchitecture`
 - All other models should be put inside the domain specific API files, for example `QListedDemoDevice` should be placed inside
   `demo-device.api.ts`
+- query和pagedresponse

@@ -21,9 +21,9 @@ import { CpuArchitecture, OsType } from 'common/model/common.model';
 import { Button } from 'primeng/button';
 
 @Component({
-  selector: 'app-demo-device-page',
-  templateUrl: './demo-device-list.page.html',
-  styleUrl: './demo-device-list.page.scss',
+  selector: 'app-demo-device-list',
+  templateUrl: './demo-device-list.component.html',
+  styleUrl: './demo-device-list.component.scss',
   imports: [
     TableModule,
     PaginatorComponent,
@@ -36,7 +36,7 @@ import { Button } from 'primeng/button';
     Button,
   ],
 })
-export class DemoDeviceListPage implements OnInit {
+export class DemoDeviceListComponent implements OnInit {
   protected readonly OS_TYPE_NAMES = OS_TYPE_NAMES;
   protected readonly CPU_ARCHITECTURE_NAMES = CPU_ARCHITECTURE_NAMES;
   protected demoDeviceSpinner = 'demoDeviceSpinner';
