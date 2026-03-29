@@ -4,7 +4,7 @@ import {
   DemoDeviceApi,
   ListDemoDevicesQuery,
   QListedDemoDevice,
-} from 'public/design-system/demo-device/demo-device.api';
+} from 'public/design-system-page/demo-device/demo-device.api';
 import { finalize, take } from 'rxjs';
 import { SpinnerService } from 'common/service/spinner.service';
 import { PageChangedEvent, PaginatorComponent } from 'common/component/paginator/paginator.component';

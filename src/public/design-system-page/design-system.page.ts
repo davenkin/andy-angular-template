@@ -7,9 +7,9 @@ import { ToastService } from 'common/service/toast.service';
 import { EllipsisedComponent } from 'common/component/ellipsised-text/ellipsised.component';
 import { ConfirmationSeverity, ConfirmService } from 'common/service/confirm.service';
 import { DialogCloseResult, DialogService, DialogSize } from 'common/service/dialog.service';
-import { DemoDialogComponent } from 'public/design-system/demo-dialog/demo-dialog.component';
+import { DemoDialogComponent } from 'public/design-system-page/demo-dialog/demo-dialog.component';
 import { take } from 'rxjs';
-import { DemoDeviceListComponent } from 'public/design-system/demo-device/list/demo-device-list.component';
+import { DemoDeviceListComponent } from 'public/design-system-page/demo-device/list/demo-device-list.component';
 import { PaginatorComponent } from 'common/component/paginator/paginator.component';
 
 @Component({

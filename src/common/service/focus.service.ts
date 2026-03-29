@@ -28,4 +28,13 @@ export class FocusService {
       element.focus();
     }
   }
+
+  public focus(selector?: string) {
+    if (selector) {
+      const element = document.querySelector(selector);
+      if (element instanceof HTMLElement && typeof element?.focus === 'function') {
+        element.focus();
+      }
+    }
+  }
 }

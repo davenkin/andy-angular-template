@@ -1,5 +1,5 @@
 import { ActivatedRouteSnapshot, CanActivateChildFn, RouterStateSnapshot, Routes } from '@angular/router';
-import { DesignSystemPage } from 'public/design-system/design-system.page';
+import { DesignSystemPage } from 'public/design-system-page/design-system.page';
 import { DeviceListPage } from 'console/device/list-page/device-list.page';
 import { RemoteDesktopPage } from 'console/device/remote-operation/remote-desktop/remote-desktop.page';
 import { inject } from '@angular/core';
