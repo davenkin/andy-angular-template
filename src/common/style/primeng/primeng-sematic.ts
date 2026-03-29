@@ -1,4 +1,4 @@
-export const PRIMENG_SEMATIC = {
+export const semantic = {
   transitionDuration: '0.2s',
   focusRing: {
     width: '0',

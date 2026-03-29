@@ -5,7 +5,7 @@ import { providePrimeNG } from 'primeng/config';
 import { includeBearerTokenInterceptor, provideKeycloak } from 'common/config/auth.config';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { apiResponseErrorInterceptor } from './error.config';
-import { PRIMENG_PRESET } from 'common/style/primeng/preset/primeng-preset';
+import { preset } from 'common/style/primeng/primeng-preset';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { DialogService } from 'primeng/dynamicdialog';
@@ -17,11 +17,11 @@ export const applicationConfig: ApplicationConfig = {
     provideRouter(routes),
     providePrimeNG({
       theme: {
-        preset: PRIMENG_PRESET,
+        preset: preset,
         options: {
           cssLayer: {
             name: 'primeng',
-            order: 'reset, base, primeng, utility',
+            order: 'reset, base, primeng, primeng-customize, utility',
           },
         },
       },

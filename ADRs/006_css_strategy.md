@@ -109,27 +109,29 @@ party components libraries(such as PrimeNG), your own component's styles should 
 
 There are 5 CSS layers, from lowest priority to highest priority:
 
-- `reset`: CSS reset, used only in `reset.scss`
-- `base`: Base global styles, used only in `base.scss`
-- `primeng`: PrimeNG components styles, those configured using PrimeNG's theme mechanism fall into this layer, such as
+1. `reset`: CSS reset, used only in `reset.scss`
+2. `base`: Base global styles, used only in `base.scss`
+3. `primeng`: PrimeNG components styles, those configured using PrimeNG's theme mechanism fall into this layer, such as
   `primeng-preset.ts`, `primeng-primitive.ts`, `primeng-sematic.ts` and `primeng-components.ts`. Other customization
-  files, such as `primeng-customize.scss`, do not belong to this layer, but stay unlayered.
-- `utility`: Utility styles
-- unlayered: Your own components' styles
+  files, such as `primeng-customize.scss`, do not belong to this layer but `primeng-customize` layer.
+4. `primeng-customize`: CSS styles for customizing PrimeNG after we fail to customize using PrimeNG's theme.
+5. `utility`: Utility styles
+6. unlayered: Your own components' styles
+
+todo: add a image for the 6 layers
 
 The CSS layers priority is configured by `theme.options.cssLayer.order` in `main.config.ts`:
 
 ```typescript
     providePrimeNG({
-      translation: all.zh_CN,
       theme: {
-        preset: PRIMENG_PRESET,
+        preset: preset,
         options: {
           cssLayer: {
             name: 'primeng',
-            order: 'reset, base, primeng, utility'
-          }
-        }
+            order: 'reset, base, primeng, primeng-customize, utility',
+          },
+        },
       },
     }),
 ```

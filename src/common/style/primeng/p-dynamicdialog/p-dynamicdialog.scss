@@ -1,0 +1,36 @@
+@layer primeng-customize {
+  p-dynamicdialog {
+    .p-dialog-header {
+      padding: var(--14px) var(--20px);
+      border-bottom: var(--content-splitter-border);
+
+      & .p-dialog-header-actions button.p-dialog-close-button {
+        border-radius: var(--medium-border-radius);
+      }
+    }
+
+    .p-dialog-content {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+
+      & > :first-child {
+        display: contents; // by pass the dialog component
+      }
+
+      .cp-dialog-content {
+        width: 100%;
+        overflow-y: auto;
+        padding: var(--12px) var(--dialog-horizontal-padding);
+      }
+
+      .cp-dialog-footer {
+        padding: var(--12px) var(--dialog-horizontal-padding);
+        border-top: var(--content-splitter-border);
+        display: flex;
+        justify-content: flex-end;
+        gap: var(--15px);
+      }
+    }
+  }
+}

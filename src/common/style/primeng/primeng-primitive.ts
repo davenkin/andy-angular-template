@@ -1,4 +1,4 @@
-export const PRIMENG_PRIMITIVE = {
+export const primitive = {
   borderRadius: {
     none: '0',
     xs: 'var(--2px)',
