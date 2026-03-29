@@ -7,7 +7,7 @@ import tooltip from 'common/style/primeng/p-tooltip/p-tooltip';
 import paginator from 'common/style/primeng/p-paginator/p-paginator';
 
 export const components = {
-  button,
+  button: button,
   toast: toast,
   tooltip: tooltip,
   paginator: paginator,

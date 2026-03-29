@@ -7,7 +7,7 @@ import { isEqual } from 'lodash-es';
 
 const LANGUAGE_TO_LOCALE: Record<string, string> = {
   zh: 'zh-CN',
-  en: 'en-US',
+  en: 'en',
 };
 
 export interface CurrentOrg {

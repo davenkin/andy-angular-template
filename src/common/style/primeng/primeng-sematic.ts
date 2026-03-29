@@ -1,4 +1,6 @@
-export const semantic = {
+import { LaraBaseTokenSections } from '@primeuix/themes/lara/base';
+
+export const semantic: LaraBaseTokenSections.Semantic = {
   transitionDuration: '0.2s',
   focusRing: {
     width: '0',
@@ -41,7 +43,7 @@ export const semantic = {
       style: '{focus.ring.style}',
       color: '{focus.ring.color}',
       offset: '{focus.ring.offset}',
-      shadow: '{focus.ring.shadow}',
+      shadow: 'none',
     },
     transitionDuration: '{transition.duration}',
   },
