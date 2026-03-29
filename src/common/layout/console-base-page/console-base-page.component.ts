@@ -2,7 +2,7 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CurrentContextService, CurrentOrg } from 'common/service/current-context.service';
 import { SpinnerService } from 'common/service/spinner.service';
-import { random } from 'lodash';
+import { random } from 'lodash-es';
 import { finalize, take, timer } from 'rxjs';
 
 @Component({
