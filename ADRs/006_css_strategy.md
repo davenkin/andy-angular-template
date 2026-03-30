@@ -29,7 +29,7 @@ Normally you add your CSS styles in the following places:
   - `primeng/preset/primeng-components.ts`: This file contains customization to PrimeNG's individual components
     using [PrimeNG's theming mechanism](https://primeng.org/theming)
   - `primeng/preset/primeng-preset.ts`: This is the PrimeNG preset, normally you don't touch this file
-  - `primeng/preset/primeng-sematic.ts`: This file contains customizations that are shared by all PrimeNG's components
+  - `primeng/preset/primeng-semantic.ts`: This file contains customizations that are shared by all PrimeNG's components
     using PrimeNG's theming mechanism
   - `primeng/customize/primeng-customize.scss`: This file contains you own styles for customizing PrimeNG components if
     you cannot implement your customization using PrimeNG preset
@@ -57,7 +57,7 @@ Some examples when deciding where to put CSS styles:
   }
   ```
 - For setting the global primary color, as it applies to the whole application, and it can be achieved using PrimeNG
-  theme's sematic, this should be configured in `primeng-sematic.ts`:
+  theme's semantic, this should be configured in `primeng-semantic.ts`:
   ```
     colorScheme: {
       light: { 
@@ -112,7 +112,7 @@ There are 5 CSS layers, from lowest priority to highest priority:
 1. `reset`: CSS reset, used only in `reset.scss`
 2. `base`: Base global styles, used only in `base.scss`
 3. `primeng`: PrimeNG components styles, those configured using PrimeNG's theme mechanism fall into this layer, such as
-  `primeng-preset.ts`, `primeng-primitive.ts`, `primeng-sematic.ts` and `primeng-components.ts`. Other customization
+  `primeng-preset.ts`, `primeng-primitive.ts`, `primeng-semantic.ts` and `primeng-components.ts`. Other customization
   files, such as `primeng-customize.scss`, do not belong to this layer but `primeng-customize` layer.
 4. `primeng-customize`: CSS styles for customizing PrimeNG after we fail to customize using PrimeNG's theme.
 5. `utility`: Utility styles

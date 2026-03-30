@@ -43,7 +43,7 @@ export const semantic: LaraBaseTokenSections.Semantic = {
       style: '{focus.ring.style}',
       color: '{focus.ring.color}',
       offset: '{focus.ring.offset}',
-      shadow: 'none',
+      shadow: '{focus.ring.shadow}',
     },
     transitionDuration: '{transition.duration}',
   },
@@ -134,7 +134,7 @@ export const semantic: LaraBaseTokenSections.Semantic = {
         focusColor: '{primary.800}',
       },
       focusRing: {
-        shadow: '0 0 0 0.2rem {primary.200}',
+        shadow: 'none',
       },
       mask: {
         background: 'rgba(0,0,0,0.4)',
@@ -262,7 +262,7 @@ export const semantic: LaraBaseTokenSections.Semantic = {
         focusColor: 'rgba(255,255,255,.87)',
       },
       focusRing: {
-        shadow: '0 0 0 0.2rem color-mix(in srgb, {primary.color}, transparent 80%)',
+        shadow: 'none',
       },
       mask: {
         background: 'rgba(0,0,0,0.6)',
