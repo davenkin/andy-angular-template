@@ -170,7 +170,7 @@ export const semantic: LaraBaseTokenSections.Semantic = {
       content: {
         background: '{surface.0}',
         hoverBackground: '{surface.100}',
-        borderColor: '{surface.200}',
+        borderColor: 'var(--split-line-color)',
         color: '{text.color}',
         hoverColor: '{text.hover.color}',
       },

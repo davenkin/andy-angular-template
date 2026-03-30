@@ -11,6 +11,7 @@
     <a routerLink="/console" pButton data-test="change-me">
       <span pButtonLabel>Console</span>
     </a>
+    <p-button data-test="change-me" label="Icons" severity="primary" (onClick)="gotoIcons()"></p-button>
   </div>
 </section>
 
@@ -439,6 +440,16 @@
     </div>
   </section>
 
+  <h1 class="section-title">Common colors</h1>
+  <section class="common-color-section">
+    @for (color of allCommonColors; track color) {
+    <div class="common-color-item">
+      <div class="common-color-legend" [style]="`background: var(${color})`"></div>
+      <div>var({{ color }})</div>
+    </div>
+    }
+  </section>
+
   <h1 class="section-title">Message</h1>
   <section class="button-section">
     <p-button
@@ -527,7 +538,7 @@
     </li>
   </ul>
 
-  <h1 class="section-title">Icon</h1>
+  <h1 id="icon-section" class="section-title">Icon</h1>
   <div>
     Icons can be added in two ways, one is to directly use
     <a href="https://primeng.org/icons">PrimeNG icon</a>
@@ -612,16 +623,6 @@
       <app-icon [icon]="icon" class="u-font-size-24"></app-icon>
       <div>{{ icon }}</div>
       <div>u-font-size-24</div>
-    </div>
-    }
-  </section>
-
-  <h1 class="section-title">Common colors</h1>
-  <section class="common-color-section">
-    @for (color of allCommonColors; track color) {
-    <div class="common-color-item">
-      <div class="common-color-legend" [style]="`background: var(${color})`"></div>
-      <div>var({{ color }})</div>
     </div>
     }
   </section>

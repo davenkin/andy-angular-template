@@ -85,6 +85,10 @@ export class DesignSystemPage {
     ];
   }
 
+  protected gotoIcons() {
+    document.getElementById('icon-section')?.scrollIntoView();
+  }
+
   protected showToast(type: string, message: string) {
     switch (type) {
       case 'info': {
