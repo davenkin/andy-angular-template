@@ -5,6 +5,8 @@ import { environment } from 'environments/environment';
 import { SUPER_ADMIN_REALM } from 'common/config/constant';
 import { isEqual } from 'lodash-es';
 
+const SUPPORTED_LANGUAGES = ['zh', 'en'];
+
 const LANGUAGE_TO_LOCALE: Record<string, string> = {
   zh: 'zh-CN',
   en: 'en',
@@ -36,14 +38,13 @@ export class CurrentContextService {
   public orgId = computed(() => this._org()?.id);
 
   public changeLanguage(language: string) {
-    const supportedLanguages = Object.keys(LANGUAGE_TO_LOCALE);
-    if (supportedLanguages.includes(language)) {
+    if (SUPPORTED_LANGUAGES.includes(language)) {
       this._language.set(language);
       localStorage.setItem(this.LANGUAGE_KEY, this.language());
       this.refreshService.refreshWholeApp();
     } else {
       console.error(
-        `Failed to change language to [${language}] as it's not supported, the supported languages are [${supportedLanguages}].`,
+        `Failed to change language to [${language}] as it's not supported, the supported languages are [${SUPPORTED_LANGUAGES}].`,
       );
     }
   }
