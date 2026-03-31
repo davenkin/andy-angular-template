@@ -30,6 +30,7 @@
           },
           "configurations": {
             "production": {
+              "extractLicenses": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -60,6 +61,17 @@
                   "with": "src/environments/environment.dev.ts"
                 }
               ]
+            },
+            "local": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -72,9 +84,12 @@
             },
             "development": {
               "buildTarget": "andy-angular-template:build:development"
+            },
+            "local": {
+              "buildTarget": "andy-angular-template:build:local"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "local"
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
