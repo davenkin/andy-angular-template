@@ -1,4 +1,4 @@
-import { Component, inject, input, output } from '@angular/core';
+import { Component, computed, inject, input, output } from '@angular/core';
 import { Paginator, PaginatorState } from 'primeng/paginator';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -24,10 +24,7 @@ export class PaginatorComponent {
   selectedCount = input(0);
   pageChanged = output<PageChangedEvent>();
 
-  protected changePage(state: PaginatorState) {
-    this.pageChanged.emit({ pageNumber: state.page as number, pageSize: state.rows as number });
-  }
-  protected get summary() {
+  protected summary = computed(() => {
     if (this.showSelectionSummary()) {
       return this.translate.instant('PAGINATION.SELECTION_SUMMARY', {
         total: this.totalElements(),
@@ -37,5 +34,9 @@ export class PaginatorComponent {
     if (this.showTotalSummary()) {
       return this.translate.instant('PAGINATION.TOTAL_SUMMARY', { total: this.totalElements() });
     }
+  });
+
+  protected changePage(state: PaginatorState) {
+    this.pageChanged.emit({ pageNumber: state.page as number, pageSize: state.rows as number });
   }
 }

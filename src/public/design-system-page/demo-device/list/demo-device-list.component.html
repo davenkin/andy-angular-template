@@ -78,8 +78,9 @@
   [totalElements]="totalElements()"
   [pageNumber]="query().pageNumber"
   [pageSize]="query().pageSize"
+  [selectedCount]="selectedDevices.length"
+  [showSelectionSummary]="true"
   (pageChanged)="changePage($event)"
 ></app-paginator>
 
-<!--In real use, prefer NOT use your own spinner like below, instead use showConsoleMainSpinner() or showGlobalSpinner() -->
 <app-spinner [name]="demoDeviceSpinner"></app-spinner>
