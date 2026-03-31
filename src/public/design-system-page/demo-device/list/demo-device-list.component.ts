@@ -45,49 +45,61 @@ export class DemoDeviceListComponent implements OnInit {
   private spinner = inject(SpinnerService);
   protected selectedOsType = ALL;
   protected selectedCpuArchitectureType = ALL;
-  protected devices = signal<QListedDemoDevice[]>([]);
-  protected totalElements = 0;
   protected selectedDevices: QListedDemoDevice[] = [];
-  protected query: ListDemoDevicesQuery = {
+  protected devices = signal<QListedDemoDevice[]>([]);
+  protected totalElements = signal(0);
+  protected query = signal<ListDemoDevicesQuery>({
     pageNumber: 0,
     pageSize: 25,
     sortField: 'name',
     sortOrder: SortOrder.DESC,
-  };
+  });
 
   ngOnInit(): void {
     this.fetchDemoDevices();
   }
 
   protected filterByOsType(type: OsType | typeof ALL) {
-    this.query.osType = type === ALL ? undefined : type;
-    this.query.pageNumber = 0;
+    this.query.update((it) => ({
+      ...it,
+      osType: type === ALL ? undefined : type,
+      pageNumber: 0,
+    }));
     this.fetchDemoDevices();
   }
 
   protected filterByCpuArchitecture(architecture: CpuArchitecture | typeof ALL) {
-    this.query.cpuArchitecture = architecture === ALL ? undefined : architecture;
-    this.query.pageNumber = 0;
+    this.query.update((it) => ({
+      ...it,
+      cpuArchitecture: architecture === ALL ? undefined : architecture,
+      pageNumber: 0,
+    }));
     this.fetchDemoDevices();
   }
 
   protected sort(event: TableLazyLoadEvent) {
-    this.query.sortField = sortFieldFrom(event);
-    this.query.sortOrder = sortOrderFrom(event);
-    this.query.pageNumber = 0;
+    this.query.update((it) => ({
+      ...it,
+      sortField: sortFieldFrom(event),
+      sortOrder: sortOrderFrom(event),
+      pageNumber: 0,
+    }));
     this.fetchDemoDevices();
   }
 
   protected changePage(event: PageChangedEvent) {
-    this.query.pageNumber = event.pageNumber;
-    this.query.pageSize = event.pageSize;
+    this.query.update((it) => ({
+      ...it,
+      pageSize: event.pageSize,
+      pageNumber: event.pageNumber,
+    }));
     this.fetchDemoDevices();
   }
 
   private fetchDemoDevices() {
     this.spinner.show(this.demoDeviceSpinner);
     this.demoDeviceApi
-      .fetchListedDemoDevices(this.query)
+      .fetchListedDemoDevices(this.query())
       .pipe(
         take(1),
         finalize(() => {
@@ -96,7 +108,7 @@ export class DemoDeviceListComponent implements OnInit {
       )
       .subscribe((response) => {
         this.devices.set(response.content);
-        this.totalElements = response.totalElements;
+        this.totalElements.set(response.totalElements);
         this.selectedDevices = [];
       });
   }

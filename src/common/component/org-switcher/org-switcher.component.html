@@ -2,7 +2,7 @@
 <p-floatlabel variant="on">
   <p-select
     inputId="org-switcher-input"
-    [options]="orgs"
+    [options]="orgs()"
     [ngModel]="currentContextService.org()"
     class="the-select"
     optionLabel="name"

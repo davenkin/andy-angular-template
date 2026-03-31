@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { Select } from 'primeng/select';
 import { FormsModule } from '@angular/forms';
 import { CurrentContextService } from 'common/service/current-context.service';
@@ -14,7 +14,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class LanguageSwitcherComponent {
   private currentContextService = inject(CurrentContextService);
-  protected currentLanguage = this.currentContextService.language();
+  protected currentLanguage = signal(this.currentContextService.language());
   protected languages = [
     {
       languageCode: 'zh',
@@ -27,6 +27,6 @@ export class LanguageSwitcherComponent {
   ];
 
   protected changeLanguage() {
-    this.currentContextService.changeLanguage(this.currentLanguage);
+    this.currentContextService.changeLanguage(this.currentLanguage());
   }
 }

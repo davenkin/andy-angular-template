@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { Select, SelectChangeEvent } from 'primeng/select';
 import { FormsModule } from '@angular/forms';
 import { CurrentContextService, CurrentOrg } from 'common/service/current-context.service';
@@ -15,7 +15,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class OrgSwitcherComponent implements OnInit {
   protected currentContextService = inject(CurrentContextService);
-  protected orgs: CurrentOrg[] = [];
+  protected orgs = signal<CurrentOrg[]>([]);
 
   ngOnInit(): void {
     // todo: user whatever means to load orgs to be selected
@@ -29,7 +29,7 @@ export class OrgSwitcherComponent implements OnInit {
     if (currentOrg) {
       orgs = [currentOrg, ...orgs];
     }
-    this.orgs = orgs;
+    this.orgs.set(orgs);
   }
 
   protected changeOrg(event: SelectChangeEvent) {

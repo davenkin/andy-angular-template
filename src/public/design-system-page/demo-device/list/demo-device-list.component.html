@@ -75,9 +75,9 @@
 </p-table>
 
 <app-paginator
-  [totalElements]="totalElements"
-  [pageNumber]="query.pageNumber"
-  [pageSize]="query.pageSize"
+  [totalElements]="totalElements()"
+  [pageNumber]="query().pageNumber"
+  [pageSize]="query().pageSize"
   (pageChanged)="changePage($event)"
 ></app-paginator>
 
