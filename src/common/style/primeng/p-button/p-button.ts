@@ -1,11 +1,11 @@
+import { ButtonDesignTokens } from '@primeuix/themes/types/button';
+
 export default {
   root: {
     focusRing: {
       width: 'var(--2px)',
       style: 'solid',
-      color: 'var(--primary-color)',
       offset: 'var(--2px)',
-      shadow: 'none',
     },
   },
   colorScheme: {
@@ -88,4 +88,4 @@ export default {
       },
     },
   },
-};
+} as ButtonDesignTokens;

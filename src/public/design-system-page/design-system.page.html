@@ -443,10 +443,10 @@
   <h1 class="section-title">Common colors</h1>
   <section class="common-color-section">
     @for (color of allCommonColors; track color) {
-    <div class="common-color-item">
-      <div class="common-color-legend" [style]="`background: var(${color})`"></div>
-      <div>var({{ color }})</div>
-    </div>
+      <div class="common-color-item">
+        <div class="common-color-legend" [style]="`background: var(${color})`"></div>
+        <div>var({{ color }})</div>
+      </div>
     }
   </section>
 
@@ -607,23 +607,10 @@
   <h3 class="section-sub-title">SVG icon list</h3>
   <section class="icon-section">
     @for (icon of allIcons; track icon) {
-    <div class="icon-item">
-      <app-icon [icon]="icon" class="u-font-size-18"></app-icon>
-      <div>{{ icon }}</div>
-      <div>default</div>
-    </div>
-
-    <div class="icon-item">
-      <app-icon [icon]="icon" class="colored-icon-blue u-font-size-18"></app-icon>
-      <div>{{ icon }}</div>
-      <div>colored</div>
-    </div>
-
-    <div class="icon-item">
-      <app-icon [icon]="icon" class="u-font-size-24"></app-icon>
-      <div>{{ icon }}</div>
-      <div>u-font-size-24</div>
-    </div>
+      <div class="icon-item">
+        <app-icon [icon]="icon" class="u-font-size-18"></app-icon>
+        <div>{{ icon }}</div>
+      </div>
     }
   </section>
 </section>

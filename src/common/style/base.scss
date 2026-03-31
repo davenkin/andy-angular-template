@@ -1,21 +1,7 @@
 // This file includes base styles and CSS variables that are globally applied for the whole application
 
 @layer base {
-  // Base global CSS styles
-  :root {
-    // set the default html font-size to 14px (browsers often set the default root font size to 16px)
-    font-size: calc(var(--root-font-size) * 1rem / 16);
-  }
-
-  body {
-    font-size: var(--14px);
-    line-height: var(--default-line-height);
-    color: var(--primary-text-color);
-    font-family: 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei',
-    'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
-  }
-
-  // Base global CSS variables
+  // Global CSS variables
   :root {
     --default-line-height: 1.5;
 
@@ -44,7 +30,7 @@
     --small-control-height: var(--32px);
     --small-control-font-size: var(--12px);
     --medium-control-height: var(--36px);
-    --medium-control-font-size: 1rem;
+    --medium-control-font-size: var(--14px);
     --large-control-height: var(--40px);
     --large-control-font-size: var(--16px);
     --small-control-padding-y: calc((var(--small-control-height) - (var(--small-control-font-size) * var(--default-line-height)) - 2px) / 2);
@@ -406,4 +392,19 @@
     --stone-900: #1c1917;
     --stone-950: #0c0a09;
   }
+
+  // Global CSS styles
+  :root {
+    // set the root(html tag) font-size to 14px (browsers often set the default root font size to 16px)
+    font-size: calc(var(--root-font-size) * 1rem / 16);
+  }
+
+  body {
+    font-size: var(--14px);
+    line-height: var(--default-line-height);
+    color: var(--primary-text-color);
+    font-family: 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei',
+    'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
+  }
+
 }

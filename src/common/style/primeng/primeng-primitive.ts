@@ -1,4 +1,6 @@
-export const primitive = {
+import { LaraBaseTokenSections } from '@primeuix/themes/lara/base';
+
+export default {
   borderRadius: {
     none: '0',
     xs: 'var(--x-small-border-radius)',
@@ -293,4 +295,4 @@ export const primitive = {
     900: 'var(--stone-900)',
     950: 'var(--stone-950)',
   },
-};
+} as LaraBaseTokenSections.Primitive;
