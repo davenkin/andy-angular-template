@@ -11,7 +11,8 @@
     <a routerLink="/console" pButton data-test="change-me">
       <span pButtonLabel>Console</span>
     </a>
-    <p-button data-test="change-me" label="Icons" severity="primary" (onClick)="gotoIcons()"></p-button>
+    <p-button data-test="change-me" label="Icons" severity="primary" (onClick)="scrollElementIntoView('icon-section')"></p-button>
+    <p-button data-test="change-me" label="Dialogs" severity="primary" (onClick)="scrollElementIntoView('message-section')"></p-button>
   </div>
 </section>
 
@@ -450,7 +451,7 @@
     }
   </section>
 
-  <h1 class="section-title">Message</h1>
+  <h1 id="message-section" class="section-title">Message</h1>
   <section class="button-section">
     <p-button
       data-test="change-me"

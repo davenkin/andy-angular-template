@@ -85,8 +85,11 @@ export class DesignSystemPage {
     ];
   }
 
-  protected gotoIcons() {
-    document.getElementById('icon-section')?.scrollIntoView();
+  protected scrollElementIntoView(elementId: string) {
+    document.getElementById(elementId)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
   }
 
   protected showToast(type: string, message: string) {
