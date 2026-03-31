@@ -1,0 +1,14 @@
+// This is the entry file for PrimeNG CSS customization.
+// This approach should be considered only after the `primeng-preset.ts` approach.
+
+// When using this approach, you should follow the below steps:
+//    1. Firstly you should customize PrimeNG components's own CSS selectors,
+//       such as targeting `.p-button`(PrimeNG's own selector for p-button) in `p-button/p-button.scss`.
+//    2. If PrimeNG's own CSS selector does not meet your requirements, try add your own CSS selectors.
+//       Prefix your own selector with 'cp' which means 'Customize PrimeNG',
+//       such as `cp-dialog-content` in `p-dynamicdialog/p-dynamicdialog.scss`.
+
+@use './p-button/p-button';
+@use './p-confirmdialog/p-confirmdialog';
+@use './p-toast/p-toast';
+@use './p-dynamicdialog/p-dynamicdialog';

@@ -27,7 +27,7 @@ Normally you add your CSS styles in the following places:
   - `primeng/primeng-components.ts`: This file contains customization to PrimeNG's components using [PrimeNG's theming mechanism](https://primeng.org/theming)
   - `primeng/primeng-preset.ts`: This is the PrimeNG preset, normally you don't touch this file
   - `primeng/primeng-semantic.ts`: This file contains design token customization that are shared by all PrimeNG's components using PrimeNG's theming mechanism
-  - `primeng/primeng-customize.scss`: This file contains you own styles for customizing PrimeNG components if you cannot implement your customization using PrimeNG design token
+  - `primeng/primeng-css.scss`: This file contains you own styles for customizing PrimeNG components if you cannot implement your customization using PrimeNG design tokens
   - Folders for individual PrimeNG components customization(e.g. `p-button`):
     - `p-button.ts`: Design tokens customization for individual PrimeNG component, should be prefered over `p-button.scss`
     - `p-button.scss`: CSS customization for individual PrimeNG component
@@ -96,12 +96,12 @@ In practice, you don't quite need to touch css layers as they are already put in
 
 The common principle for arranging css layers is: default global styles should be put as lowest, followed by 3rd party components libraries(such as PrimeNG), and your own component's styles(which are unlayered) should be of highest priority.
 
-There are 5 CSS layers, from lowest priority to highest priority:
+There are 6 CSS layers, from lowest priority to highest priority:
 
 1. `reset`: CSS reset, used only in `reset.scss`
 2. `base`: Base global styles, used only in `base.scss`
-3. `primeng`: PrimeNG design tokens fall into this layer, such as `primeng-preset.ts`, `primeng-primitive.ts`, `primeng-semantic.ts` and `primeng-components.ts`. Other customization files, such as `primeng-customize.scss`, do not belong to this layer but `primeng-customize` layer
-4. `primeng-customize`: CSS styles for customizing PrimeNG components if design tokens cannot meet our requirements
+3. `primeng`: PrimeNG design tokens fall into this layer, such as `primeng-preset.ts`, `primeng-primitive.ts`, `primeng-semantic.ts` and `primeng-components.ts`. Other customization files, such as `primeng-css.scss`, do not belong to this layer but `primeng-css` layer
+4. `primeng-css`: CSS styles for customizing PrimeNG components if design tokens cannot meet our requirements
 5. `utility`: Utility styles in `utility.scss`
 6. unlayered: Your own components' styles
 
@@ -116,7 +116,7 @@ The CSS layers priority is configured by `theme.options.cssLayer.order` in `main
         options: {
           cssLayer: {
             name: 'primeng',
-            order: 'reset, base, primeng, primeng-customize, utility',
+            order: 'reset, base, primeng, primeng-css, utility',
           },
         },
       },

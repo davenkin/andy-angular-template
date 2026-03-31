@@ -1,7 +1,7 @@
-// This file is the entry point for all global styles
+// This is the entry file for all global/shared styles.
 
 @use 'common/style/reset';
 @use 'common/style/base';
-@use 'common/style/primeng/primeng-customize';
+@use 'common/style/primeng/primeng-css';
 @use 'common/style/utility';
 @use 'primeicons/primeicons.css';
