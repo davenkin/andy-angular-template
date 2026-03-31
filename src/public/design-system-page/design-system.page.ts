@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { iconRegistry } from 'common/component/icon/icon-registry';
 import { IconComponent, IconType } from 'common/component/icon/icon.component';
 import { Button, ButtonDirective, ButtonLabel } from 'primeng/button';
@@ -14,6 +14,9 @@ import { PaginatorComponent } from 'common/component/paginator/paginator.compone
 
 @Component({
   selector: 'app-design-system-page',
+  templateUrl: './design-system.page.html',
+  styleUrl: './design-system.page.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     IconComponent,
     RouterLink,
@@ -24,8 +27,6 @@ import { PaginatorComponent } from 'common/component/paginator/paginator.compone
     DemoDeviceListComponent,
     PaginatorComponent,
   ],
-  templateUrl: './design-system.page.html',
-  styleUrl: './design-system.page.scss',
 })
 export class DesignSystemPage {
   private toastService = inject(ToastService);

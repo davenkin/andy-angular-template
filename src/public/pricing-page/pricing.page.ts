@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-pricing-page',
   templateUrl: './pricing.page.html',
   styleUrl: './pricing.page.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PricingPage {}

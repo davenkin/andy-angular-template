@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { TableLazyLoadEvent, TableModule } from 'primeng/table';
 import {
   DemoDeviceApi,
@@ -24,6 +24,7 @@ import { Button } from 'primeng/button';
   selector: 'app-demo-device-list',
   templateUrl: './demo-device-list.component.html',
   styleUrl: './demo-device-list.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     TableModule,
     PaginatorComponent,

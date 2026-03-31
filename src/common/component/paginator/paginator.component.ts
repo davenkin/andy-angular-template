@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input, output } from '@angular/core';
 import { Paginator, PaginatorState } from 'primeng/paginator';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -11,6 +11,7 @@ export interface PageChangedEvent {
   selector: 'app-paginator',
   templateUrl: './paginator.component.html',
   styleUrls: ['./paginator.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [Paginator],
 })
 export class PaginatorComponent {

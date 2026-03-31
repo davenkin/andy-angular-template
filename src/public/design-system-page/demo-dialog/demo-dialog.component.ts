@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Button } from 'primeng/button';
 import { DialogCloseResult } from 'common/service/dialog.service';
@@ -8,6 +8,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   selector: 'app-demo-dialog',
   templateUrl: './demo-dialog.component.html',
   styleUrl: './demo-dialog.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [Button, TranslatePipe],
 })
 export class DemoDialogComponent {

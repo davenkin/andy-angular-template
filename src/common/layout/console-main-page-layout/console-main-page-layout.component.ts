@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { SpinnerComponent } from 'common/component/spinner/spinner.component';
 import { CONSOLE_MAIN_SPINNER } from 'common/service/spinner.service';
@@ -11,6 +11,7 @@ import { OrgSwitcherComponent } from 'common/component/org-switcher/org-switcher
   selector: 'app-console-main-page-layout',
   templateUrl: './console-main-page-layout.component.html',
   styleUrl: './console-main-page-layout.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     RouterOutlet,
     SpinnerComponent,

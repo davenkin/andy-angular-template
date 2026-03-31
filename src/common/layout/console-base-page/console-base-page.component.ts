@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CurrentContextService, CurrentOrg } from 'common/service/current-context.service';
 import { SpinnerService } from 'common/service/spinner.service';
@@ -8,8 +8,9 @@ import { finalize, take, timer } from 'rxjs';
 @Component({
   selector: 'app-console-base-page',
   templateUrl: './console-base-page.component.html',
-  imports: [RouterOutlet],
   styleUrl: './console-base-page.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterOutlet],
 })
 export class ConsoleBasePageComponent implements OnInit {
   private currentContextService = inject(CurrentContextService);
