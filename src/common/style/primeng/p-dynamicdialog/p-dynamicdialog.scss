@@ -20,13 +20,13 @@
         display: contents; // by pass the dialog component
       }
 
-      .pod-dialog-content {
+      .pa-dialog-content {
         width: 100%;
         overflow-y: auto;
         padding: var(--8px) var(--dialog-horizontal-padding);
       }
 
-      .pod-dialog-footer {
+      .pa-dialog-footer {
         padding: var(--10px) var(--dialog-horizontal-padding);
         border-top: var(--content-splitter-border);
         display: flex;

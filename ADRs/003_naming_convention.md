@@ -8,24 +8,24 @@ A consistent naming convention makes the code easier to understand and enhances 
 
 We follow the below naming conventions:
 
-| Situation                               | Naming format        | Example                      | Note                                                       |
-|-----------------------------------------|----------------------|------------------------------|------------------------------------------------------------|
-| Page components(Components with routes) | xxx.page.ts          | `design-system.page.ts`      | To make pages explict                                      |
-| Pages with list data                    | xxx-list.page.ts     | `device-list.page.ts`        | To make lists explict                                      |
-| Dialog components                       | xxx.dialog.ts        | `edit-device-name.dialog.ts` | To make dialogs explict                                    |
-| Regular components                      | xxx.components.ts    | `spinner.component.ts`       |                                                            |
-| Directives                              | xxx.directive.ts     | `file-size.directive.ts`     |                                                            |
-| API clients                             | xxx.api.ts           | `device.api.ts`              |                                                            |
-| Store services                          | xxx-store.service.ts | `device-store.service.ts`    |                                                            |
-| Regular services                        | xxx.service.ts       | `feature-toggle.service.ts`  |                                                            |
-| Files containing data models            | xxx.model.ts         | `common.model.ts`            |                                                            |
-| CSS classes                             | xxx-yyy              | `main-content`               | Use all lowercases with dashes                             |
-| CSS classes for overriding PrimeNG      | pod-xxx              | `pod-dialog-footer`          | Only use this as a last resort after PrimeNG design tokens |
-| CSS variables                           | --xxx-yyy            | `--primary-text-color`       | Use all lowercases with dashes                             |
-| JS class names                          | AbcXyz               | `DeviceListPage`             |                                                            |
-| JS variable names                       | abcXyz               | `currentState`               |                                                            |
-| Utility class file names                | xxx.utils.ts         | `pagination.utils.ts`        |                                                            |
-| Configuration files                     | xxx.config.ts        | `route.config.ts`            |                                                            |
+| Situation                               | Naming format        | Example                      | Note                                                             |
+|-----------------------------------------|----------------------|------------------------------|------------------------------------------------------------------|
+| Page components(Components with routes) | xxx.page.ts          | `design-system.page.ts`      | To make pages explict                                            |
+| Pages with list data                    | xxx-list.page.ts     | `device-list.page.ts`        | To make lists explict                                            |
+| Dialog components                       | xxx.dialog.ts        | `edit-device-name.dialog.ts` | To make dialogs explict                                          |
+| Regular components                      | xxx.components.ts    | `spinner.component.ts`       |                                                                  |
+| Directives                              | xxx.directive.ts     | `file-size.directive.ts`     |                                                                  |
+| API clients                             | xxx.api.ts           | `device.api.ts`              |                                                                  |
+| Store services                          | xxx-store.service.ts | `device-store.service.ts`    |                                                                  |
+| Regular services                        | xxx.service.ts       | `feature-toggle.service.ts`  |                                                                  |
+| Files containing data models            | xxx.model.ts         | `common.model.ts`            |                                                                  |
+| CSS classes                             | xxx-yyy              | `main-content`               | Use all lowercases with dashes                                   |
+| CSS classes for assisting PrimeNG       | pa-xxx               | `pa-dialog-footer`           | Your own CSS selectors that work together with PrimeNG selectors |
+| CSS variables                           | --xxx-yyy            | `--primary-text-color`       | Use all lowercases with dashes                                   |
+| JS class names                          | AbcXyz               | `DeviceListPage`             |                                                                  |
+| JS variable names                       | abcXyz               | `currentState`               |                                                                  |
+| Utility class file names                | xxx.utils.ts         | `pagination.utils.ts`        |                                                                  |
+| Configuration files                     | xxx.config.ts        | `route.config.ts`            |                                                                  |
 
 The following principles should also be considered:
 

@@ -5,8 +5,8 @@
 //    1. Firstly you should customize PrimeNG components's own CSS selectors,
 //       such as targeting `.p-button`(PrimeNG's own selector for p-button) in `p-button/p-button.scss`.
 //    2. If PrimeNG's own CSS selector does not meet your requirements, try add your own CSS selectors.
-//       Prefix your own selector with 'pod-' which means 'PrimeNG Override',
-//       such as `pod-dialog-content` in `p-dynamicdialog/p-dynamicdialog.scss`.
+//       Prefix your own selector with 'pa-' which means 'PrimeNG Assist',
+//       such as `pa-dialog-content` in `p-dynamicdialog/p-dynamicdialog.scss`.
 
 @use './p-button/p-button';
 @use './p-confirmdialog/p-confirmdialog';
