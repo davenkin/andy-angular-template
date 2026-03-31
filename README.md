@@ -24,8 +24,8 @@ This is a sample Angular project with the following features:
 
 ## Tech stack
 
-- Angular 20
-- PrimeNG 20
+- Angular 21
+- PrimeNG 21
 
 ## Local run
 

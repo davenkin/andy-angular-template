@@ -1,11 +1,11 @@
 export const primitive = {
   borderRadius: {
     none: '0',
-    xs: 'var(--2px)',
-    sm: 'var(--3px)',
-    md: 'var(--4px)',
-    lg: 'var(--6px)',
-    xl: 'var(--8px)',
+    xs: 'var(--x-small-border-radius)',
+    sm: 'var(--small-border-radius)',
+    md: 'var(--medium-border-radius)',
+    lg: 'var(--large-border-radius)',
+    xl: 'var(--x-large-border-radius)',
   },
   emerald: {
     50: 'var(--emerald-50)',

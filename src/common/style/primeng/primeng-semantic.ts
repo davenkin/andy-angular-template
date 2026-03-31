@@ -25,17 +25,17 @@ export const semantic: LaraBaseTokenSections.Semantic = {
     950: '{blue.950}',
   },
   formField: {
-    paddingX: '0.75rem',
-    paddingY: '0.625rem',
+    paddingX: 'var(--medium-control-padding-y)',
+    paddingY: 'var(--medium-control-padding-y)',
     sm: {
-      fontSize: '0.875rem',
-      paddingX: '0.625rem',
-      paddingY: '0.5rem',
+      fontSize: 'var(--small-control-font-size)',
+      paddingX: 'var(--small-control-padding-y)',
+      paddingY: 'var(--small-control-padding-y)',
     },
     lg: {
-      fontSize: '1.125rem',
-      paddingX: '0.875rem',
-      paddingY: '0.75rem',
+      fontSize: 'var(--large-control-font-size)',
+      paddingX: 'var(--large-control-padding-y)',
+      paddingY: 'var(--large-control-padding-y)',
     },
     borderRadius: '{border.radius.md}',
     focusRing: {
