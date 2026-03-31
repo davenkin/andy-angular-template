@@ -11,9 +11,24 @@
     <a routerLink="/console" pButton data-test="change-me">
       <span pButtonLabel>Console</span>
     </a>
-    <p-button data-test="change-me" label="Colors" severity="primary" (onClick)="scrollElementIntoView('color-section')"></p-button>
-    <p-button data-test="change-me" label="Icons" severity="primary" (onClick)="scrollElementIntoView('icon-section')"></p-button>
-    <p-button data-test="change-me" label="Dialogs" severity="primary" (onClick)="scrollElementIntoView('confirm-section')"></p-button>
+    <p-button
+      data-test="change-me"
+      label="Colors"
+      severity="primary"
+      (onClick)="scrollElementIntoView('color-section')"
+    ></p-button>
+    <p-button
+      data-test="change-me"
+      label="Icons"
+      severity="primary"
+      (onClick)="scrollElementIntoView('icon-section')"
+    ></p-button>
+    <p-button
+      data-test="change-me"
+      label="Dialogs"
+      severity="primary"
+      (onClick)="scrollElementIntoView('confirm-section')"
+    ></p-button>
   </div>
 </section>
 
@@ -389,7 +404,7 @@
     </div>
   </section>
 
-  <h1 id="color-section" class="section-title">Text color</h1>
+  <h1 class="section-title">Text color</h1>
   <section class="text-color-section">
     <div class="text-color-item">
       <span style="color: var(--primary-text-color); font-size: 20px; font-weight: 700">Primary</span>
@@ -421,7 +436,7 @@
     </div>
   </section>
 
-  <h1 class="section-title">Content background color</h1>
+  <h1 id="color-section" class="section-title">Content background color</h1>
   <section class="common-color-section">
     <div class="common-color-item width-250">
       <div class="common-color-legend" [style]="`background: var(--light-background-color)`"></div>
@@ -445,10 +460,10 @@
   <h1 class="section-title">Common colors</h1>
   <section class="common-color-section">
     @for (color of allCommonColors; track color) {
-      <div class="common-color-item">
-        <div class="common-color-legend" [style]="`background: var(${color})`"></div>
-        <div>var({{ color }})</div>
-      </div>
+    <div class="common-color-item">
+      <div class="common-color-legend" [style]="`background: var(${color})`"></div>
+      <div>var({{ color }})</div>
+    </div>
     }
   </section>
 
@@ -609,10 +624,10 @@
   <h3 id="icon-section" class="section-sub-title">SVG icon list</h3>
   <section class="icon-section">
     @for (icon of allIcons; track icon) {
-      <div class="icon-item">
-        <app-icon [icon]="icon" class="u-font-size-18"></app-icon>
-        <div>{{ icon }}</div>
-      </div>
+    <div class="icon-item">
+      <app-icon [icon]="icon" class="u-font-size-18"></app-icon>
+      <div>{{ icon }}</div>
+    </div>
     }
   </section>
 </section>
