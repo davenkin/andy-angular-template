@@ -11,8 +11,7 @@ We decide use this ADR to list all the common coding practices in the below `Imp
 
 ## Implementation
 
-- Favor [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
-  over [SCSS variables](https://sass-lang.com/documentation/variables/) as CSS variables are built in support from CSS.
+- Favor [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) over [SCSS variables](https://sass-lang.com/documentation/variables/) as CSS variables are built in support from CSS.
 - Use [Standalone components](https://blog.angular-university.io/angular-standalone-components/), do not
   use [NgModules based components](https://angular.dev/guide/ngmodules/overview). Because standalone component is much
   more concise and is recommended by Angular team.
@@ -46,3 +45,10 @@ export interface ListDemoDevicesQuery extends PageQuery {
   cpuArchitecture?: CpuArchitecture;
 }
 ```
+
+- Prefer using [Angular Signal](https://angular.dev/guide/signals) together with
+  `changeDetection: ChangeDetectionStrategy.OnPush,` to accomplish reactivity as this is Angular's official recommended
+  approach.
+- For Typescript modules, prefer
+  using [named export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export#using_named_exports)
+  over [default export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export#using_the_default_export).
