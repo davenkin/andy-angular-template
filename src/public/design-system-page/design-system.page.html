@@ -11,8 +11,9 @@
     <a routerLink="/console" pButton data-test="change-me">
       <span pButtonLabel>Console</span>
     </a>
+    <p-button data-test="change-me" label="Colors" severity="primary" (onClick)="scrollElementIntoView('color-section')"></p-button>
     <p-button data-test="change-me" label="Icons" severity="primary" (onClick)="scrollElementIntoView('icon-section')"></p-button>
-    <p-button data-test="change-me" label="Dialogs" severity="primary" (onClick)="scrollElementIntoView('message-section')"></p-button>
+    <p-button data-test="change-me" label="Dialogs" severity="primary" (onClick)="scrollElementIntoView('confirm-section')"></p-button>
   </div>
 </section>
 
@@ -388,7 +389,7 @@
     </div>
   </section>
 
-  <h1 class="section-title">Text color</h1>
+  <h1 id="color-section" class="section-title">Text color</h1>
   <section class="text-color-section">
     <div class="text-color-item">
       <span style="color: var(--primary-text-color); font-size: 20px; font-weight: 700">Primary</span>
@@ -451,7 +452,7 @@
     }
   </section>
 
-  <h1 id="message-section" class="section-title">Message</h1>
+  <h1 class="section-title">Message</h1>
   <section class="button-section">
     <p-button
       data-test="change-me"
@@ -479,7 +480,7 @@
     ></p-button>
   </section>
 
-  <h1 class="section-title">Condirm</h1>
+  <h1 id="confirm-section" class="section-title">Confirm</h1>
   <section class="button-section">
     <p-button
       data-test="change-me"
@@ -539,7 +540,7 @@
     </li>
   </ul>
 
-  <h1 id="icon-section" class="section-title">Icon</h1>
+  <h1 class="section-title">Icon</h1>
   <div>
     Icons can be added in two ways, one is to directly use
     <a href="https://primeng.org/icons">PrimeNG icon</a>
@@ -605,7 +606,7 @@
     </div>
   </div>
 
-  <h3 class="section-sub-title">SVG icon list</h3>
+  <h3 id="icon-section" class="section-sub-title">SVG icon list</h3>
   <section class="icon-section">
     @for (icon of allIcons; track icon) {
       <div class="icon-item">

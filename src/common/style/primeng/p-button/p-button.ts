@@ -7,6 +7,9 @@ export default {
       style: 'solid',
       offset: 'var(--2px)',
     },
+    label: {
+      fontWeight: '500',
+    },
   },
   colorScheme: {
     light: {

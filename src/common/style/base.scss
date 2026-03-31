@@ -46,7 +46,8 @@
     --rounded-border-radius: 99999px;
 
     --content-splitter-border: 1px solid var(--split-line-color);
-    --dialog-horizontal-padding: var(--30px);
+    --dialog-horizontal-padding: var(--24px);
+    --control-gap: var(--15px);
 
     --root-font-size: 14;
     --1px: calc(1rem / var(--root-font-size));

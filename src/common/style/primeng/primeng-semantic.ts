@@ -25,16 +25,16 @@ export default {
     950: '{blue.950}',
   },
   formField: {
-    paddingX: 'var(--medium-control-padding-y)',
+    paddingX: '0.75rem',
     paddingY: 'var(--medium-control-padding-y)',
     sm: {
       fontSize: 'var(--small-control-font-size)',
-      paddingX: 'var(--small-control-padding-y)',
+      paddingX: '0.625rem',
       paddingY: 'var(--small-control-padding-y)',
     },
     lg: {
       fontSize: 'var(--large-control-font-size)',
-      paddingX: 'var(--large-control-padding-y)',
+      paddingX: '0.875rem',
       paddingY: 'var(--large-control-padding-y)',
     },
     borderRadius: '{border.radius.md}',

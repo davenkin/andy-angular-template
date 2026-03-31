@@ -1,21 +1,23 @@
 @layer primeng-customize {
   .p-confirmdialog {
     .p-dialog-header {
-      padding: var(--14px) var(--20px);
+      padding: var(--12px) var(--20px);
       border-bottom: var(--content-splitter-border);
 
       & .p-dialog-header-actions button.p-dialog-close-button {
         border-radius: var(--medium-border-radius);
+        width: var(--30px);
+        height: var(--30px);
       }
     }
 
     .p-dialog-content {
       width: var(--500px);
-      padding: var(--24px);
+      padding: var(--dialog-horizontal-padding);
     }
 
     .p-dialog-footer {
-      gap: var(--15px);
+      gap: var(--control-gap);
     }
   }
 }

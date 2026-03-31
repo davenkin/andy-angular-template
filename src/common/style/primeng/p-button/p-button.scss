@@ -5,6 +5,18 @@
       font-size: var(--14px);
     }
 
+    button.p-button:not(.p-button-text):not(.p-button-icon-only) {
+      min-width: var(--80px);
+    }
+
+    button.p-button.p-button-sm:not(.p-button-text):not(.p-button-icon-only) {
+      min-width: var(--60px);
+    }
+
+    button.p-button.p-button-lg:not(.p-button-text):not(.p-button-icon-only) {
+      min-width: var(--100px);
+    }
+
     //all disabled buttons
     button.p-button:disabled {
       opacity: 1;
