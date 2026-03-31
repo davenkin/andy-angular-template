@@ -1,4 +1,4 @@
-export default {
+export const iconRegistry = {
   box:
     '<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
     '  <path fill-rule="evenodd" clip-rule="evenodd"\n' +

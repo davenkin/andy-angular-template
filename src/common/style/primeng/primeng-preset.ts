@@ -1,12 +1,12 @@
 import { definePreset } from '@primeuix/themes';
 import Lara from '@primeuix/themes/Lara';
-import semantic from 'common/style/primeng/primeng-semantic';
-import primitive from './primeng-primitive';
-import components from './primeng-components';
+import { primengSemantic } from 'common/style/primeng/primeng-semantic';
+import { primengPrimitive } from './primeng-primitive';
+import { primengComponents } from './primeng-components';
 import { BaseDesignTokens, Preset } from '@primeuix/themes/types';
 
 export const preset = definePreset(Lara, {
-  primitive,
-  semantic,
-  components,
+  primitive: primengPrimitive,
+  semantic: primengSemantic,
+  components: primengComponents,
 } as Preset<BaseDesignTokens>);

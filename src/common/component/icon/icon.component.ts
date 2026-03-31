@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
-import iconRegistry from 'common/component/icon/icon-registry';
+import { iconRegistry } from 'common/component/icon/icon-registry';
 import { DomSanitizer } from '@angular/platform-browser';
 
 export type IconType = keyof typeof iconRegistry;

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import iconRegistry from 'common/component/icon/icon-registry';
+import { iconRegistry } from 'common/component/icon/icon-registry';
 import { IconComponent, IconType } from 'common/component/icon/icon.component';
 import { Button, ButtonDirective, ButtonLabel } from 'primeng/button';
 import { RouterLink } from '@angular/router';

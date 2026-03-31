@@ -1,6 +1,6 @@
 import { ButtonDesignTokens } from '@primeuix/themes/types/button';
 
-export default {
+export const button: ButtonDesignTokens = {
   root: {
     focusRing: {
       width: 'var(--2px)',
@@ -91,4 +91,4 @@ export default {
       },
     },
   },
-} as ButtonDesignTokens;
+};

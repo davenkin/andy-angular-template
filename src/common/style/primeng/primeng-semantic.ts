@@ -1,6 +1,6 @@
 import { LaraBaseTokenSections } from '@primeuix/themes/lara/base';
 
-export default {
+export const primengSemantic: LaraBaseTokenSections.Semantic = {
   transitionDuration: '0.2s',
   focusRing: {
     width: '1px',
@@ -363,4 +363,4 @@ export default {
       },
     },
   },
-} as LaraBaseTokenSections.Semantic;
+};

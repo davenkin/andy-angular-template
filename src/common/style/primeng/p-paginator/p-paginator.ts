@@ -1,6 +1,6 @@
 import { PaginatorDesignTokens } from '@primeuix/themes/types/paginator';
 
-export default {
+export const paginator: PaginatorDesignTokens = {
   navButton: {
     borderRadius: 'var(--medium-border-radius)',
     focusRing: {
@@ -11,4 +11,4 @@ export default {
       shadow: 'none',
     },
   },
-} as PaginatorDesignTokens;
+};

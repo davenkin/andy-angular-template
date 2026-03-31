@@ -1,6 +1,6 @@
 import { ToastDesignTokens } from '@primeuix/themes/types/toast';
 
-export default {
+export const toast: ToastDesignTokens = {
   root: {
     borderWidth: 'var(--1px)',
     width: 'var(--600px)',
@@ -28,4 +28,4 @@ export default {
       },
     },
   },
-} as ToastDesignTokens;
+};

@@ -1,6 +1,6 @@
 import { LaraBaseTokenSections } from '@primeuix/themes/lara/base';
 
-export default {
+export const primengPrimitive: LaraBaseTokenSections.Primitive = {
   borderRadius: {
     none: '0',
     xs: 'var(--x-small-border-radius)',
@@ -295,4 +295,4 @@ export default {
     900: 'var(--stone-900)',
     950: 'var(--stone-950)',
   },
-} as LaraBaseTokenSections.Primitive;
+};
