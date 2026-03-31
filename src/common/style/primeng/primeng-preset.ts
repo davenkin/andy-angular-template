@@ -1,5 +1,5 @@
 // This is the entry file for PrimeNG design token customization.
-// This approach should be considered before the `primeng-css.scss` approach.
+// This approach should be considered before the `primeng-override.scss` approach.
 
 import { definePreset } from '@primeuix/themes';
 import Lara from '@primeuix/themes/Lara';

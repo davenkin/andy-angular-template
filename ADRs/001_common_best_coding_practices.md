@@ -13,7 +13,7 @@ We decide use this ADR to list all the common coding practices in the below `Imp
 - Favor [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) over [SCSS variables](https://sass-lang.com/documentation/variables/) as CSS variables are built in support from CSS.
 - Use [Standalone components](https://blog.angular-university.io/angular-standalone-components/), do not use [NgModules based components](https://angular.dev/guide/ngmodules/overview). Because standalone component is much more concise and is recommended by Angular team.
 - The order of CSS should match the order of the element in HTML.
-- When customize PrimeNG components styles, prefer customizing PrimeNG's preset over using your own CSS styles.
+- When customize PrimeNG components styles, prefer customizing PrimeNG's preset(design tokens) over direct CSS styles.
 - Methods for GET HTTP requests should be prefixed with `fetchXxx()`. Methods for POST/PUT/PATCH HTTP requests should express its business intent, such as `createUser()`, `updateEmail()`.
 - All enum types use Typescript's `enum` and make the enum name the same as its value, for example:
 

@@ -24,13 +24,13 @@ Normally you add your CSS styles in the following places:
 
 - Your components' own CSS files: These files reside adjacent to your components' class files
 - The `src/style` folder: This folder contains styles that are global or shared, with the following files:
-  - `primeng/primeng-components.ts`: This file contains customization to PrimeNG's components using [PrimeNG's theming mechanism](https://primeng.org/theming)
+  - `primeng/primeng-components.ts`: This file contains design token customization for individual PrimeNG components using [PrimeNG's theming mechanism](https://primeng.org/theming)
   - `primeng/primeng-preset.ts`: This is the PrimeNG preset, normally you don't touch this file
-  - `primeng/primeng-semantic.ts`: This file contains design token customization that are shared by all PrimeNG's components using PrimeNG's theming mechanism
-  - `primeng/primeng-css.scss`: This file contains you own styles for customizing PrimeNG components if you cannot implement your customization using PrimeNG design tokens
-  - Folders for individual PrimeNG components customization(e.g. `p-button`):
+  - `primeng/primeng-semantic.ts`: This file contains design token customization that are shared by all PrimeNG components using PrimeNG's theming mechanism
+  - `primeng/primeng-override.scss`: This file contains you own styles for overriding PrimeNG components if you cannot implement your customization using PrimeNG design tokens
+  - Folders for individual PrimeNG component customization(e.g. `p-button`):
     - `p-button.ts`: Design tokens customization for individual PrimeNG component, should be prefered over `p-button.scss`
-    - `p-button.scss`: CSS customization for individual PrimeNG component
+    - `p-button.scss`: CSS overriding for individual PrimeNG component
   - `base.scss`: This file contains globally applied styles and CSS variables
   - `reset.scss`: This file contains global styles for [CSS reset](https://meyerweb.com/eric/tools/css/reset/), normally you don't touch this file
   - `utility.scss`: This file contains utility styles that can be shared/referenced by all components
@@ -38,7 +38,7 @@ Normally you add your CSS styles in the following places:
 When you try to add CSS styles, go through the following steps to decide where to put the styles. The red boxes are the
 key decision points. There are multiple files related to PrimeNG customization, pay attention to the their applying
 order. Basically, for customizing PrimeNG components, first use PrimeNG's built-in theming(design token) mechanism, only if
-that fails to work then you add your CSS styles.
+that fails should you add your CSS overrides.
 
 ![how-to-decide-where-to-put-css-styles](../ADRs/asset/how-to-decide-where-to-put-css-styles.png)
 
@@ -80,7 +80,7 @@ Some examples when deciding where to put CSS styles:
       }
     }
   ```
-- For setting pure icon `<p-button>`'s width and height to be the same size, this cannot be done by configuring PrimeNG's design tokens, so we need to do this inside the p-button's own customization file `p-button.scss`:
+- For setting pure icon `<p-button>`'s width and height to be the same size, this cannot be done by configuring PrimeNG's design tokens, so we need to do this inside the p-button's own overriding CSS file `p-button.scss`:
   ```
   // pure icon button
   button.p-button.p-button-icon-only {
@@ -100,8 +100,8 @@ There are 6 CSS layers, from lowest priority to highest priority:
 
 1. `reset`: CSS reset, used only in `reset.scss`
 2. `base`: Base global styles, used only in `base.scss`
-3. `primeng`: PrimeNG design tokens fall into this layer, such as `primeng-preset.ts`, `primeng-primitive.ts`, `primeng-semantic.ts` and `primeng-components.ts`. Other customization files, such as `primeng-css.scss`, do not belong to this layer but `primeng-css` layer
-4. `primeng-css`: CSS styles for customizing PrimeNG components if design tokens cannot meet our requirements
+3. `primeng`: PrimeNG design tokens fall into this layer, such as `primeng-preset.ts`, `primeng-primitive.ts`, `primeng-semantic.ts` and `primeng-components.ts`. Other customization files, such as `primeng-override.scss`, do not belong to this layer but `primeng-override` layer
+4. `primeng-override`: CSS styles for overriding PrimeNG components' styles if design tokens failed to meet our requirements
 5. `utility`: Utility styles in `utility.scss`
 6. unlayered: Your own components' styles
 
@@ -116,7 +116,7 @@ The CSS layers priority is configured by `theme.options.cssLayer.order` in `main
         options: {
           cssLayer: {
             name: 'primeng',
-            order: 'reset, base, primeng, primeng-css, utility',
+            order: 'reset, base, primeng, primeng-override, utility',
           },
         },
       },

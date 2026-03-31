@@ -21,7 +21,7 @@ export const applicationConfig: ApplicationConfig = {
         options: {
           cssLayer: {
             name: 'primeng',
-            order: 'reset, base, primeng, primeng-css, utility',
+            order: 'reset, base, primeng, primeng-override, utility',
           },
         },
       },

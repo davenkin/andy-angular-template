@@ -204,16 +204,16 @@
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "mode": "orbit",
         "elementId": "K1k2Ur3gCGo43RPKFvCjU",
+        "mode": "orbit",
         "fixedPoint": [
           0.5001,
           0.9999999999999998
         ]
       },
       "endBinding": {
-        "mode": "orbit",
         "elementId": "FNAPz_JochS3mkSERc-7F",
+        "mode": "orbit",
         "fixedPoint": [
           0.5005990731321354,
           0.031592173756955666
@@ -416,16 +416,16 @@
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "mode": "orbit",
         "elementId": "FNAPz_JochS3mkSERc-7F",
+        "mode": "orbit",
         "fixedPoint": [
           0.5005990731321354,
           0.9684078262430443
         ]
       },
       "endBinding": {
-        "mode": "orbit",
         "elementId": "pQp6OP5J1q-waAsY9ZMX-",
+        "mode": "orbit",
         "fixedPoint": [
           0.5001,
           0
@@ -476,8 +476,8 @@
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "mode": "orbit",
         "elementId": "pQp6OP5J1q-waAsY9ZMX-",
+        "mode": "orbit",
         "fixedPoint": [
           0.5001,
           1
@@ -722,8 +722,8 @@
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "mode": "orbit",
         "elementId": "FNAPz_JochS3mkSERc-7F",
+        "mode": "orbit",
         "fixedPoint": [
           0.9687125579292418,
           0.5054747801112907
@@ -972,8 +972,8 @@
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "mode": "orbit",
         "elementId": "wOIKPWnIpD4f1Wh_odo4w",
+        "mode": "orbit",
         "fixedPoint": [
           0.5001,
           1.0000000000000002
@@ -1025,16 +1025,16 @@
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "mode": "orbit",
         "elementId": "lMSFtF1zUqmM9jtdr-2s6",
+        "mode": "orbit",
         "fixedPoint": [
           0.5019017370505428,
           0.9683823529411765
         ]
       },
       "endBinding": {
-        "mode": "orbit",
         "elementId": "_q4NWq62DphnjdLAYSwpP",
+        "mode": "orbit",
         "fixedPoint": [
           0.5026867496795887,
           0.03161764705882353
@@ -1086,8 +1086,8 @@
       "lastCommittedPoint": null,
       "startBinding": null,
       "endBinding": {
-        "mode": "orbit",
         "elementId": "VDFlS3hWrjyS2kmJi-cSf",
+        "mode": "orbit",
         "fixedPoint": [
           0.5001,
           0
@@ -2072,11 +2072,11 @@
       "index": "am",
       "roundness": null,
       "seed": 2069419229,
-      "version": 379,
-      "versionNonce": 415210243,
+      "version": 381,
+      "versionNonce": 1617630790,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1774960333857,
+      "updated": 1774967592004,
       "link": null,
       "locked": false,
       "text": "Can the style be\ncustomized by\nPrimeNG's design\ntokens in the\ncomponent",
@@ -2551,10 +2551,10 @@
     {
       "id": "Od3ZW5BgGRDiu_BUChsV_",
       "type": "text",
-      "x": 2696.781539916992,
-      "y": 1172.8211669921875,
-      "width": 241.31973266601562,
-      "height": 75,
+      "x": 2689.371551513672,
+      "y": 1160.3211669921875,
+      "width": 256.13970947265625,
+      "height": 100,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -2568,20 +2568,20 @@
       "index": "b00",
       "roundness": null,
       "seed": 1399578205,
-      "version": 1034,
-      "versionNonce": 783166893,
+      "version": 1046,
+      "versionNonce": 1929375322,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1774960247404,
+      "updated": 1774967576668,
       "link": null,
       "locked": false,
-      "text": "Put the style inside the\ncomponent's own scss file,\ne.g. such p-button.scss",
+      "text": "Put the style inside the\ncomponent's own overriding\nscss file,  e.g. such p-\nbutton.scss",
       "fontSize": 20,
       "fontFamily": 6,
       "textAlign": "center",
       "verticalAlign": "middle",
       "containerId": "q76R-qkeJvcMA1zz7oM7T",
-      "originalText": "Put the style inside the component's own scss file,  e.g. such p-button.scss",
+      "originalText": "Put the style inside the component's own overriding scss file,  e.g. such p-button.scss",
       "autoResize": true,
       "lineHeight": 1.25
     },
