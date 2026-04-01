@@ -15,10 +15,10 @@ We follow the below naming conventions:
 | Dialog components                       | xxx.dialog.ts        | `edit-device-name.dialog.ts` | To make dialogs explict                                          |
 | Regular components                      | xxx.components.ts    | `spinner.component.ts`       |                                                                  |
 | Directives                              | xxx.directive.ts     | `file-size.directive.ts`     |                                                                  |
-| API clients                             | xxx.api.ts           | `device.api.ts`              |                                                                  |
+| API clients                             | xxx.api.ts           | `device.api.ts`              | Contains both API calls and related data models                  |
 | Store services                          | xxx-store.service.ts | `device-store.service.ts`    |                                                                  |
 | Regular services                        | xxx.service.ts       | `feature-toggle.service.ts`  |                                                                  |
-| Files containing data models            | xxx.model.ts         | `common.model.ts`            |                                                                  |
+| Files containing data models            | xxx.model.ts         | `common.model.ts`            | Contains common data models shared across the whole application  |
 | CSS classes                             | xxx-yyy              | `main-content`               | Use all lowercases with dashes                                   |
 | CSS classes for assisting PrimeNG       | pa-xxx               | `pa-dialog-footer`           | Your own CSS selectors that work together with PrimeNG selectors |
 | CSS variables                           | --xxx-yyy            | `--primary-text-color`       | Use all lowercases with dashes                                   |

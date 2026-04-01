@@ -30,8 +30,9 @@ export interface ListDemoDevicesQuery extends PageQuery {
 }
 ```
 
-- Paged response should wrapped into `PagedResponse`, such as:
+- Paged response should be wrapped into `PagedResponse`, such as:
 
 ```
 public fetchListedDemoDevices(query: ListDemoDevicesQuery): Observable<PagedResponse<QListedDemoDevice>> {}
 ```
+- When call APIs, usually we need to show a loading spinner, prefer using `SpinnerService.showGlobalSpinner()/SpinnerService.showConsoleMainSpinner()` over your own spinners, more details please refer to [007_how_to_show_loading_spinner.md](./007_how_to_show_loading_spinner.md) 

@@ -26,8 +26,7 @@ export enum OsType {
 }
 ```
 
-- Prefer using Angular's built-in control flow blocks such as `@for`, `@if` and `@else` etc, don't use the old ones like `ngIf` or `ngFor` etc.
-- For folder names, its parent context can be excluded, for example under folder `demo-device`, if there is a subfolder to hold device list pages, the subfolder name can just be `list-page`, no need to be `demo-device-list-page`. However, for component names you need to include its context, so under `demo-device/list-page` folder, the component file name for device list page should be `demo-device-list.page.ts` but not `list.page.ts`.
+- Prefer using Angular's built-in control flow blocks such as `@for`, `@if` and `@else` etc., don't use the old ones like `ngIf` or `ngFor` etc.
 - All folder and file names should use singular form but not plural form, for example, use `device` but not `devices`.
 - Prefer using [Angular Signal](https://angular.dev/guide/signals) together with `changeDetection: ChangeDetectionStrategy.OnPush,` to accomplish reactivity as this is Angular's official recommended approach.
 - For Typescript modules, prefer using [named export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export#using_named_exports) over [default export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export#using_the_default_export), because named export makes refactoring easier and makes module names more consistent.
