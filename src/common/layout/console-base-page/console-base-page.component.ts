@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { CurrentContextService, CurrentOrg } from 'common/service/current-context.service';
 import { SpinnerService } from 'common/service/spinner.service';
 import { random } from 'lodash-es';
-import { finalize, take, timer } from 'rxjs';
+import { take, timer } from 'rxjs';
 
 @Component({
   selector: 'app-console-base-page',
@@ -34,16 +34,10 @@ export class ConsoleBasePageComponent implements OnInit {
   }
 
   private loadCurrentOrgFromServer() {
-    this.spinnerService.showGlobalSpinner();
-
     //todo: call real backend api to get the user's org info call this.currentContextService.changeOrg() to change the org
-    timer(1000)
-      .pipe(
-        take(1),
-        finalize(() => {
-          this.spinnerService.hideGlobalSpinner();
-        }),
-      )
+    this.spinnerService
+      .withGlobalSpinner(timer(1000))
+      .pipe(take(1))
       .subscribe(() => {
         this.currentContextService.changeOrg({ id: '12345', name: 'My company' + random(1, 10) }, false);
         this.ready.set(true);

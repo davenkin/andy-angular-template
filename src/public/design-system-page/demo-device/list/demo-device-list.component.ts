@@ -5,7 +5,6 @@ import {
   ListDemoDevicesQuery,
   QListedDemoDevice,
 } from 'public/design-system-page/demo-device/demo-device.api';
-import { finalize, take } from 'rxjs';
 import { SpinnerService } from 'common/service/spinner.service';
 import { PageChangedEvent, PaginatorComponent } from 'common/component/paginator/paginator.component';
 import { Select } from 'primeng/select';
@@ -19,6 +18,7 @@ import { sortFieldFrom, SortOrder, sortOrderFrom } from 'common/utils/pagination
 import { TableEmptyPlaceholderComponent } from 'common/component/table-empty-placeholder/table-empty-placeholder.component';
 import { CpuArchitecture, OsType } from 'common/model/common.model';
 import { Button } from 'primeng/button';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-demo-device-list',
@@ -98,15 +98,9 @@ export class DemoDeviceListComponent implements OnInit {
   }
 
   private fetchDemoDevices() {
-    this.spinner.show(this.demoDeviceSpinner);
-    this.demoDeviceApi
-      .fetchListedDemoDevices(this.query())
-      .pipe(
-        take(1),
-        finalize(() => {
-          this.spinner.hide(this.demoDeviceSpinner);
-        }),
-      )
+    this.spinner
+      .withSpinner(this.demoDeviceSpinner, this.demoDeviceApi.fetchListedDemoDevices(this.query()))
+      .pipe(take(1))
       .subscribe((response) => {
         this.devices.set(response.content);
         this.totalElements.set(response.totalElements);
