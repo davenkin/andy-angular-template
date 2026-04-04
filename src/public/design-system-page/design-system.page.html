@@ -44,6 +44,9 @@
     <p-button data-test="change-me" label="Small" severity="primary" size="small"></p-button>
     <p-button data-test="change-me" label="Large" severity="primary" size="large"></p-button>
     <p-button data-test="change-me" label="Raised" severity="primary" [raised]="true"></p-button>
+    <button data-test="change-me" pButton severity="primary">
+      <span pButtonLabel>Button Directive</span>
+    </button>
   </section>
 
   <h3 class="section-sub-title">Outlined Button</h3>
@@ -56,6 +59,9 @@
     <p-button data-test="change-me" label="Small" severity="primary" size="small" variant="outlined"></p-button>
     <p-button data-test="change-me" label="Large" severity="primary" size="large" variant="outlined"></p-button>
     <p-button data-test="change-me" label="Raised" severity="primary" variant="outlined" [raised]="true"></p-button>
+    <button data-test="change-me" pButton severity="primary" [outlined]="true">
+      <span pButtonLabel>Button Directive</span>
+    </button>
   </section>
 
   <h3 class="section-sub-title">Pure text button</h3>
@@ -68,9 +74,12 @@
     <p-button data-test="change-me" label="Small" variant="text" severity="primary" size="small" />
     <p-button data-test="change-me" label="Large" variant="text" severity="primary" size="large" />
     <p-button data-test="change-me" label="Raised" variant="text" severity="primary" [raised]="true" />
+    <button data-test="change-me" pButton severity="primary" [text]="true">
+      <span pButtonLabel>Button Directive</span>
+    </button>
   </div>
 
-  <h3 class="section-sub-title">Pure text button with normal font weight</h3>
+  <h3 class="section-sub-title">Pure text button with inner text</h3>
   <div class="button-section">
     <p-button data-test="change-me" variant="text" severity="primary">Primary</p-button>
     <p-button data-test="change-me" variant="text" severity="secondary">Secondary</p-button>
@@ -93,6 +102,10 @@
     <p-button data-test="change-me" icon="pi pi-home" label="Small" severity="primary" size="small"></p-button>
     <p-button data-test="change-me" icon="pi pi-home" label="Large" severity="primary" size="large"></p-button>
     <p-button data-test="change-me" icon="pi pi-home" label="Raised" severity="primary" [raised]="true"></p-button>
+    <button data-test="change-me" pButton severity="primary">
+      <i class="pi pi pi-home" pButtonIcon></i>
+      <span pButtonLabel>Button Directive</span>
+    </button>
   </section>
 
   <h3 class="section-sub-title">Outlined button with PrimeNG icon</h3>
@@ -139,6 +152,11 @@
       variant="outlined"
       [raised]="true"
     ></p-button>
+
+    <button data-test="change-me" pButton severity="primary" [outlined]="true">
+      <i class="pi pi pi-home" pButtonIcon></i>
+      <span pButtonLabel>Button Directive</span>
+    </button>
   </section>
 
   <h3 class="section-sub-title">Pure icon button with PrimeNG icon</h3>
@@ -175,6 +193,13 @@
     <div class="button-card">
       <p-button data-test="change-me" icon="pi pi-home" variant="text" severity="primary" [rounded]="true" />
       Rounded
+    </div>
+
+    <div class="button-card">
+      <button data-test="change-me" pButton severity="primary" [text]="true">
+        <i class="pi pi pi-home" pButtonIcon></i>
+      </button>
+      Button Directive
     </div>
   </section>
 
@@ -220,6 +245,13 @@
       <p-button data-test="change-me" icon="pi pi-home" severity="primary" [rounded]="true" [outlined]="true" />
       Rounded Outlined
     </div>
+
+    <div class="button-card">
+      <button data-test="change-me" pButton severity="primary">
+        <i class="pi pi pi-home" pButtonIcon></i>
+      </button>
+      Button Directive
+    </div>
   </section>
 
   <h1 class="section-title">SVG icon Button</h1>
@@ -249,6 +281,10 @@
     <p-button data-test="change-me" severity="primary" label="Raised" [raised]="true">
       <app-icon icon="box"></app-icon>
     </p-button>
+    <button data-test="change-me" pButton severity="primary">
+      <app-icon icon="box"></app-icon>
+      <span pButtonLabel>Button Directive</span>
+    </button>
   </section>
 
   <h3 class="section-sub-title">Outlined button with SVG icon</h3>
@@ -277,6 +313,10 @@
     <p-button data-test="change-me" severity="primary" label="Raised" variant="outlined" [raised]="true">
       <app-icon icon="box"></app-icon>
     </p-button>
+    <button data-test="change-me" pButton severity="primary" [outlined]="true">
+      <app-icon icon="box"></app-icon>
+      <span pButtonLabel>Button Directive</span>
+    </button>
   </section>
 
   <h3 class="section-sub-title">Pure icon button with SVG icon</h3>
@@ -328,6 +368,12 @@
         <app-icon icon="box"></app-icon>
       </p-button>
       Rounded
+    </div>
+    <div class="button-card">
+      <button data-test="change-me" pButton severity="primary" [text]="true">
+        <app-icon icon="box"></app-icon>
+      </button>
+      Button Directive
     </div>
   </section>
 
@@ -392,6 +438,12 @@
         <app-icon icon="box"></app-icon>
       </p-button>
       Outlined
+    </div>
+    <div class="button-card">
+      <button data-test="change-me" pButton class="p-button-icon-only" severity="primary">
+        <app-icon icon="box"></app-icon>
+      </button>
+      Button Directive
     </div>
   </section>
 
@@ -460,10 +512,10 @@
   <h1 class="section-title">Common colors</h1>
   <section class="common-color-section">
     @for (color of allCommonColors; track color) {
-      <div class="common-color-item">
-        <div class="common-color-legend" [style]="`background: var(${color})`"></div>
-        <div>var({{ color }})</div>
-      </div>
+    <div class="common-color-item">
+      <div class="common-color-legend" [style]="`background: var(${color})`"></div>
+      <div>var({{ color }})</div>
+    </div>
     }
   </section>
 
@@ -624,10 +676,10 @@
   <h3 id="icon-section" class="section-sub-title">SVG icon list</h3>
   <section class="icon-section">
     @for (icon of allIcons; track icon) {
-      <div class="icon-item">
-        <app-icon [icon]="icon" class="u-font-size-18"></app-icon>
-        <div>{{ icon }}</div>
-      </div>
+    <div class="icon-item">
+      <app-icon [icon]="icon" class="u-font-size-18"></app-icon>
+      <div>{{ icon }}</div>
+    </div>
     }
   </section>
 </section>

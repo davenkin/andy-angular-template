@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { iconRegistry } from 'common/component/icon/icon-registry';
 import { IconComponent, IconType } from 'common/component/icon/icon.component';
-import { Button, ButtonDirective, ButtonLabel } from 'primeng/button';
+import { Button, ButtonDirective, ButtonIcon, ButtonLabel } from 'primeng/button';
 import { RouterLink } from '@angular/router';
 import { ToastService } from 'common/service/toast.service';
 import { EllipsisedComponent } from 'common/component/ellipsised-text/ellipsised.component';
@@ -26,6 +26,7 @@ import { PaginatorComponent } from 'common/component/paginator/paginator.compone
     EllipsisedComponent,
     DemoDeviceListComponent,
     PaginatorComponent,
+    ButtonIcon,
   ],
 })
 export class DesignSystemPage {

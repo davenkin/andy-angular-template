@@ -3,8 +3,7 @@
 @layer base {
   // Global CSS variables
   :root {
-    --default-line-height: 1.5;
-
+    // Primary color
     --primary-color: var(--blue-600);
 
     // Text colors
@@ -33,9 +32,15 @@
     --medium-control-font-size: var(--14px);
     --large-control-height: var(--40px);
     --large-control-font-size: var(--16px);
-    --small-control-padding-y: calc((var(--small-control-height) - (var(--small-control-font-size) * var(--default-line-height)) - 2px) / 2);
-    --medium-control-padding-y: calc((var(--medium-control-height) - (var(--medium-control-font-size) * var(--default-line-height)) - 2px) / 2);
-    --large-control-padding-y: calc((var(--large-control-height) - (var(--large-control-font-size) * var(--default-line-height)) - 2px) / 2);
+    --small-control-padding-y: calc(
+      (var(--small-control-height) - (var(--small-control-font-size) * var(--default-line-height)) - 2px) / 2
+    );
+    --medium-control-padding-y: calc(
+      (var(--medium-control-height) - (var(--medium-control-font-size) * var(--default-line-height)) - 2px) / 2
+    );
+    --large-control-padding-y: calc(
+      (var(--large-control-height) - (var(--large-control-font-size) * var(--default-line-height)) - 2px) / 2
+    );
 
     // Border radius
     --x-small-border-radius: var(--2px);
@@ -45,10 +50,13 @@
     --x-large-border-radius: var(--8px);
     --rounded-border-radius: 99999px;
 
+    // Miscellaneous
     --content-splitter-border: 1px solid var(--split-line-color);
     --dialog-horizontal-padding: var(--24px);
     --control-gap: var(--15px);
+    --default-line-height: 1.5;
 
+    // Sizes
     --root-font-size: 14;
     --1px: calc(1rem / var(--root-font-size));
     --2px: calc(2rem / var(--root-font-size));
@@ -404,8 +412,8 @@
     font-size: var(--14px);
     line-height: var(--default-line-height);
     color: var(--primary-text-color);
-    font-family: 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei',
-    'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
+    font-family:
+      'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei',
+      'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
   }
-
 }

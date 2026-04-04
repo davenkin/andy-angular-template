@@ -3,6 +3,13 @@
 // All utility css selectors should start with `u-` which means 'Utility' to distinguish from other css selectors
 
 @layer utility {
+  .u-focus-visible-ring:focus-visible,
+  .u-focus-within-ring:focus-within {
+    outline: var(--2px) solid var(--primary-color);
+    outline-offset: var(--2px);
+    border-radius: var(--4px);
+  }
+
   .u-margin-top-5 {
     margin-top: var(--5px);
   }
@@ -69,12 +76,5 @@
 
   .u-height-20 {
     height: var(--20px);
-  }
-
-  .u-focus-visible-ring:focus-visible,
-  .u-focus-within-ring:focus-within {
-    outline: var(--2px) solid var(--primary-color);
-    outline-offset: var(--2px);
-    border-radius: var(--4px);
   }
 }
