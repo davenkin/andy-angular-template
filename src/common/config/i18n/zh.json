@@ -31,5 +31,8 @@
       "ARM": "ARM",
       "ARM_64": "ARM_64"
     }
+  },
+  "API_DEFAULT_ERROR_CODES": {
+    "ACCESS_DENIED": "无权访问"
   }
 }
