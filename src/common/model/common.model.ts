@@ -5,6 +5,17 @@ export interface Environment {
   keycloakUrl: string;
 }
 
+export interface StandardApiError {
+  code: string;
+  message: string;
+  userMessage: string;
+  status: number;
+  path: string;
+  timestamp: string;
+  traceId: string;
+  data: any;
+}
+
 export interface Option {
   value: string;
   label: string;
