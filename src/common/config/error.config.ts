@@ -18,7 +18,7 @@ export function apiResponseErrorInterceptor(
         keycloak.login();
       }
       if (error.status === 403) {
-        toastService.error(translate.instant('API_DEFAULT_ERROR_CODES.ACCESS_DENIED'));
+        toastService.error(translate.instant('ACCESS_DENIED'));
       }
       return throwError(() => error);
     }),

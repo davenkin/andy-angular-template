@@ -10,7 +10,7 @@ export class StandardApiErrorService {
   private translate = inject(TranslateService);
   private toastService = inject(ToastService);
 
-  public defaultHandleError(response: HttpErrorResponse, excludedErrorCodes?: string[]) {
+  public showDefaultErrorMessage(response: HttpErrorResponse, excludedErrorCodes?: string[]) {
     if (!isStandardApiError(response)) {
       return;
     }
@@ -20,7 +20,7 @@ export class StandardApiErrorService {
       return;
     }
 
-    const messageKey = 'API_DEFAULT_ERROR_CODES.' + apiError.code;
+    const messageKey = 'API_DEFAULT_ERROR_MESSAGE.' + apiError.code;
     this.toastService.error(this.translate.instant(messageKey, apiError.data));
   }
 }

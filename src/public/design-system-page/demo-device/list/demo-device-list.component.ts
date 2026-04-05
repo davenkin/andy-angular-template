@@ -13,16 +13,14 @@ import { FormsModule } from '@angular/forms';
 import { ALL } from 'common/config/constant';
 import { SpinnerComponent } from 'common/component/spinner/spinner.component';
 import { FloatLabel } from 'primeng/floatlabel';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { sortFieldFrom, SortOrder, sortOrderFrom } from 'common/utils/pagination.utils';
 import { TableEmptyPlaceholderComponent } from 'common/component/table-empty-placeholder/table-empty-placeholder.component';
 import { CpuArchitecture, OsType } from 'common/model/common.model';
 import { Button } from 'primeng/button';
 import { take } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
-import { isStandardApiError, standardApiErrorTypeOf } from 'common/utils/common.utils';
 import { StandardApiErrorService } from 'common/service/standard-api-error.service';
-import { ToastService } from 'common/service/toast.service';
 
 @Component({
   selector: 'app-demo-device-list',
@@ -48,8 +46,6 @@ export class DemoDeviceListComponent implements OnInit {
   private demoDeviceApi = inject(DemoDeviceApi);
   protected enumService = inject(EnumService);
   private spinner = inject(SpinnerService);
-  private toastService = inject(ToastService);
-  private translate = inject(TranslateService);
   private standardApiErrorService = inject(StandardApiErrorService);
   protected selectedOsType = ALL;
   protected selectedCpuArchitectureType = ALL;
@@ -115,19 +111,7 @@ export class DemoDeviceListComponent implements OnInit {
           this.selectedDevices = [];
         },
         error: (errorResponse: HttpErrorResponse) => {
-          if (isStandardApiError(errorResponse)) {
-            switch (standardApiErrorTypeOf(errorResponse)) {
-              case 'REQUEST_VALIDATION_FAILED': {
-                this.toastService.error(this.translate.instant('REQUEST_VALIDATION_FAILED'));
-                break;
-              }
-              default: {
-                this.standardApiErrorService.defaultHandleError(errorResponse);
-              }
-            }
-          } else {
-            this.toastService.error(errorResponse.error.message);
-          }
+          this.standardApiErrorService.showDefaultErrorMessage(errorResponse);
         },
       });
   }

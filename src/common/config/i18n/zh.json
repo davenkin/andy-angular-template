@@ -18,6 +18,7 @@
   "CHOOSE_ORG": "选择组织",
   "CHOOSE_LANG": "选择语言",
   "CLOSE_DIALOG": "关闭对话框",
+  "ACCESS_DENIED": "无权访问",
   "ENUM": {
     "OS_TYPE": {
       "WINDOWS": "Windows",
@@ -32,7 +33,7 @@
       "ARM_64": "ARM_64"
     }
   },
-  "API_DEFAULT_ERROR_CODES": {
-    "ACCESS_DENIED": "无权访问"
+  "API_DEFAULT_ERROR_MESSAGE": {
+    "MAINTENANCE_RECORD_NOT_FOUND": "维保记录不存在"
   }
 }
