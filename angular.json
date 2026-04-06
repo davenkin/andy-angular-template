@@ -20,13 +20,16 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": ["src"]
+            },
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss", "node_modules/ngx-spinner/animations/ball-clip-rotate.css"]
+            "styles": ["src/styles.scss"]
           },
           "configurations": {
             "production": {
