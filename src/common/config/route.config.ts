@@ -46,7 +46,7 @@ export const routes: Routes = [
       {
         path: 'remote-desktop',
         loadComponent: () =>
-          import('console/device/remote-operation/remote-desktop/remote-desktop.page').then(
+          import('console/device/remote-operation/remote-desktop-page/remote-desktop.page').then(
             (it) => it.RemoteDesktopPage,
           ),
       },
