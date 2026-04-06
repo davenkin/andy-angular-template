@@ -1,4 +1,5 @@
 import {
+  DOCUMENT,
   effect,
   EnvironmentProviders,
   inject,
@@ -25,11 +26,13 @@ export function provideI18n(): EnvironmentProviders {
       const translate = inject(TranslateService);
       const primeNG = inject(PrimeNG);
       const currentContext = inject(CurrentContextService);
+      const document = inject(DOCUMENT);
       translate.setTranslation('zh', zhTranslation);
       translate.setTranslation('en', enTranslation);
       effect(() => {
-        translate.use(currentContext.language()); //change language for ngx-translate when language changes
-        primeNG.setTranslation(PrimeLocals[currentContext.locale() as keyof AllLocales]); //change locale for PrimeNG when language changes
+        document.documentElement.lang = currentContext.locale();
+        translate.use(currentContext.language());
+        primeNG.setTranslation(PrimeLocals[currentContext.locale() as keyof AllLocales]);
       });
     }),
   ]);

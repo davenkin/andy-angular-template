@@ -1,11 +1,8 @@
 import { ActivatedRouteSnapshot, CanActivateChildFn, RouterStateSnapshot, Routes } from '@angular/router';
-import { DesignSystemPage } from 'public/design-system-page/design-system.page';
 import { DeviceListPage } from 'console/device/list-page/device-list.page';
-import { RemoteDesktopPage } from 'console/device/remote-operation/remote-desktop/remote-desktop.page';
 import { inject } from '@angular/core';
 import Keycloak from 'keycloak-js';
 import { HomePage } from 'public/home-page/home.page';
-import { PricingPage } from 'public/pricing-page/pricing.page';
 import { DashboardPage } from 'console/dashboard/dashboard-page/dashboard.page';
 import { MemberListPage } from 'console/member/list-page/member-list.page';
 import { PublicMainPageLayoutComponent } from 'common/layout/public-main-page-layout/public-main-page-layout.component';
@@ -48,7 +45,10 @@ export const routes: Routes = [
       },
       {
         path: 'remote-desktop',
-        component: RemoteDesktopPage,
+        loadComponent: () =>
+          import('console/device/remote-operation/remote-desktop/remote-desktop.page').then(
+            (it) => it.RemoteDesktopPage,
+          ),
       },
     ],
   },
@@ -62,12 +62,12 @@ export const routes: Routes = [
       },
       {
         path: 'pricing',
-        component: PricingPage,
+        loadComponent: () => import('public/pricing-page/pricing.page').then((it) => it.PricingPage),
       },
     ],
   },
   {
     path: 'design-system',
-    component: DesignSystemPage,
+    loadComponent: () => import('public/design-system-page/design-system.page').then((it) => it.DesignSystemPage),
   },
 ];

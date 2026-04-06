@@ -1,20 +1,21 @@
-import { Injectable } from '@angular/core';
+import { DOCUMENT, inject, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FocusService {
   private elements: HTMLElement[] = [];
+  private document = inject(DOCUMENT);
 
   public push(selector?: string) {
     if (selector) {
-      const element = document.querySelector(selector);
+      const element = this.document.querySelector(selector);
       if (element instanceof HTMLElement) {
         this.elements.push(element);
       }
     } else {
-      if (document.activeElement && document.activeElement instanceof HTMLElement) {
-        this.elements.push(document.activeElement);
+      if (this.document.activeElement && this.document.activeElement instanceof HTMLElement) {
+        this.elements.push(this.document.activeElement);
       }
     }
   }
@@ -31,7 +32,7 @@ export class FocusService {
 
   public focus(selector?: string) {
     if (selector) {
-      const element = document.querySelector(selector);
+      const element = this.document.querySelector(selector);
       if (element instanceof HTMLElement && typeof element?.focus === 'function') {
         element.focus();
       }

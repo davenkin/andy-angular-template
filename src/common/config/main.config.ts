@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter, withComponentInputBinding } from '@angular/router';
+import { PreloadAllModules, provideRouter, withComponentInputBinding, withPreloading } from '@angular/router';
 import { routes } from 'common/config/route.config';
 import { providePrimeNG } from 'primeng/config';
 import { includeBearerTokenInterceptor, provideKeycloak } from 'common/config/auth.config';
@@ -14,7 +14,7 @@ import { provideI18n } from 'common/config/i18n.config';
 export const applicationConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes, withComponentInputBinding()),
+    provideRouter(routes, withComponentInputBinding(), withPreloading(PreloadAllModules)),
     providePrimeNG({
       theme: {
         preset: preset,
