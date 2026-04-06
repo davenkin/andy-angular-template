@@ -20,6 +20,7 @@
     "@ngx-translate/core": "^17.0.0",
     "@primeuix/themes": "^2.0.3",
     "@types/lodash-es": "^4.17.12",
+    "date-fns": "^4.1.0",
     "keycloak-js": "^26.2.3",
     "lodash-es": "^4.17.23",
     "ngx-spinner": "^21.1.0",
