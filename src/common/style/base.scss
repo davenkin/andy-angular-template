@@ -408,12 +408,38 @@
     font-size: calc(var(--root-font-size) * 1rem / 16);
   }
 
+  // NotoSansSC fonts
+  @font-face {
+    font-family: NotoSansSC;
+    font-weight: 300;
+    src: url('/fonts/NotoSansSC-Light.ttf') format('opentype');
+  }
+
+  @font-face {
+    font-family: NotoSansSC;
+    font-weight: 400;
+    src: url('/fonts/NotoSansSC-Regular.ttf') format('opentype');
+  }
+  @font-face {
+    font-family: NotoSansSC;
+    font-weight: 500;
+    src: url('/fonts/NotoSansSC-Medium.ttf') format('opentype');
+  }
+  @font-face {
+    font-family: NotoSansSC;
+    font-weight: 600;
+    src: url('/fonts/NotoSansSC-SemiBold.ttf') format('opentype');
+  }
+  @font-face {
+    font-family: NotoSansSC;
+    font-weight: 700;
+    src: url('/fonts/NotoSansSC-Bold.ttf') format('opentype');
+  }
+
   body {
     font-size: var(--14px);
     line-height: var(--default-line-height);
     color: var(--primary-text-color);
-    font-family:
-      'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei',
-      'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
+    font-family: 'NotoSansSC', 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
   }
 }
