@@ -4,7 +4,7 @@ import { routes } from 'common/config/route.config';
 import { providePrimeNG } from 'primeng/config';
 import { includeBearerTokenInterceptor, provideKeycloak } from 'common/config/auth.config';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { apiResponseErrorInterceptor } from './error.config';
+import { apiResponseErrorInterceptor } from 'common/config/error.config';
 import { preset } from 'common/style/primeng/primeng-preset';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ConfirmationService, MessageService } from 'primeng/api';

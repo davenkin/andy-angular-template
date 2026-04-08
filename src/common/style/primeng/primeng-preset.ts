@@ -2,11 +2,11 @@
 // This approach should be considered before the `primeng-override.scss` approach.
 
 import { definePreset } from '@primeuix/themes';
+import { BaseDesignTokens, Preset } from '@primeuix/themes/types';
 import Lara from '@primeuix/themes/Lara';
-import { primengSemantic } from 'common/style/primeng/primeng-semantic';
+import { primengSemantic } from './primeng-semantic';
 import { primengPrimitive } from './primeng-primitive';
 import { primengComponents } from './primeng-components';
-import { BaseDesignTokens, Preset } from '@primeuix/themes/types';
 
 export const preset = definePreset(Lara, {
   primitive: primengPrimitive,
