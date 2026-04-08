@@ -3,11 +3,11 @@ import { LaraBaseTokenSections } from '@primeuix/themes/lara/base';
 export const primengPrimitive: LaraBaseTokenSections.Primitive = {
   borderRadius: {
     none: '0',
-    xs: 'var(--x-small-border-radius)',
+    xs: 'var(--xsmall-border-radius)',
     sm: 'var(--small-border-radius)',
     md: 'var(--medium-border-radius)',
     lg: 'var(--large-border-radius)',
-    xl: 'var(--x-large-border-radius)',
+    xl: 'var(--xlarge-border-radius)',
   },
   emerald: {
     50: 'var(--emerald-50)',
