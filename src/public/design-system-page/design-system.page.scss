@@ -10,7 +10,7 @@
   top: 0;
   padding: var(--10px) var(--30px);
   background: white;
-  border-bottom: var(--1px) solid var(--split-line-color);
+  border-bottom: var(--1px) solid var(--line-primary-color);
   z-index: 1;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .section-title {
-  color: var(--emphasised-text-color);
+  color: var(--text-emphasis-color);
   margin-top: var(--70px);
   margin-bottom: var(--10px);
 
@@ -44,7 +44,7 @@
 }
 
 .section-sub-title {
-  color: var(--emphasised-text-color);
+  color: var(--text-emphasis-color);
   margin-top: var(--30px);
   margin-bottom: var(--5px);
 }
@@ -102,6 +102,11 @@
   width: var(--30px);
   border-radius: var(--4px);
   aspect-ratio: 1;
+}
+
+.line-color-legend {
+  width: var(--100px);
+  height: var(--2px);
 }
 
 .icon-section {

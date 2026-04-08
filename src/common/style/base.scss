@@ -7,23 +7,34 @@
     --primary-color: var(--blue-600);
 
     // Text colors
-    --emphasised-text-color: var(--neutral-800);
-    --primary-text-color: var(--neutral-700);
-    --secondary-text-color: var(--neutral-600);
-    --placeholder-text-color: var(--neutral-300);
+    --text-emphasis-color: var(--neutral-800);
+    --text-primary-color: var(--neutral-700);
+    --text-secondary-color: var(--neutral-600);
+    --text-tertiary-color: var(--neutral-500);
+    --text-light-color: var(--neutral-300);
 
     // Status colors
-    --success-color: var(--green-700);
-    --warn-color: var(--amber-700);
-    --error-color: var(--red-700);
+    --safe-green-color: #15803d;
+    --warn-orange-color: #ea580c;
+    --error-red-color: #e1251b;
 
     // Background colors
-    --light-background-color: var(--gray-100);
-    --medium-background-color: var(--gray-200);
-    --heavy-background-color: var(--gray-300);
+    --bg-dark-color: var(--gray-300);
+    --bg-primary-color: var(--gray-200);
+    --bg-secondary-color: var(--gray-100);
+    --bg-light-color: var(--gray-50);
 
     // Line colors
-    --split-line-color: var(--gray-300);
+    --line-dark-color: #a9aeb8;
+    --line-primary-color: #c9cdd4;
+    --line-secondary-color: #e5e7ec;
+    --line-light-color: #f2f3f5;
+
+    // Dialog width
+    --dialog-small-width: var(--436px);
+    --dialog-medium-width: var(--572px);
+    --dialog-large-width: var(--864px);
+    --dialog-xlarge-width: var(--1110px);
 
     // Control sizes
     --small-control-height: var(--32px);
@@ -51,7 +62,7 @@
     --rounded-border-radius: 99999px;
 
     // Miscellaneous
-    --content-splitter-border: 1px solid var(--split-line-color);
+    --content-splitter-border: 1px solid var(--line-primary-color);
     --dialog-horizontal-padding: var(--24px);
     --control-gap: var(--15px);
     --default-line-height: 1.5;
@@ -79,6 +90,7 @@
     --19px: calc(19rem / var(--root-font-size));
     --20px: calc(20rem / var(--root-font-size));
     --24px: calc(24rem / var(--root-font-size));
+    --28px: calc(28rem / var(--root-font-size));
     --30px: calc(30rem / var(--root-font-size));
     --32px: calc(32rem / var(--root-font-size));
     --36px: calc(36rem / var(--root-font-size));
@@ -442,7 +454,7 @@
   body {
     font-size: var(--14px);
     line-height: var(--default-line-height);
-    color: var(--primary-text-color);
+    color: var(--text-primary-color);
     font-family: 'NotoSansSC', 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
   }
 }

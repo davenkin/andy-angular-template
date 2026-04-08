@@ -16,15 +16,15 @@ export const toast: ToastDesignTokens = {
       },
       success: {
         borderColor: 'transparent',
-        color: 'var(--success-color)',
+        color: 'var(--safe-green-color)',
       },
       warn: {
         borderColor: 'transparent',
-        color: 'var(--warn-color)',
+        color: 'var(--warn-orange-color)',
       },
       error: {
         borderColor: 'transparent',
-        color: 'var(--error-color)',
+        color: 'var(--error-red-color)',
       },
     },
   },

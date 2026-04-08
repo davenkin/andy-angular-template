@@ -39,7 +39,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--10px) var(--30px);
-  border-bottom: var(--1px) solid var(--split-line-color);
+  border-bottom: var(--1px) solid var(--line-primary-color);
 }
 
 .header-right {
@@ -51,7 +51,7 @@
 .main-content-container {
   flex: 1;
   padding: var(--24px);
-  background-color: var(--light-background-color);
+  background-color: var(--bg-light-color);
 }
 
 .main-content {

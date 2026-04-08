@@ -21,23 +21,27 @@ export const button: ButtonDesignTokens = {
           },
         },
         secondary: {
-          color: 'var(--secondary-text-color)',
+          color: 'var(--text-secondary-color)',
           focusRing: {
             color: 'var(--primary-color)',
             shadow: 'none',
           },
         },
         warn: {
-          background: 'var(--warn-color)',
-          borderColor: 'var(--warn-color)',
+          background: 'var(--warn-orange-color)',
+          borderColor: 'var(--warn-orange-color)',
+          hoverBackground: `{orange.700}`,
+          hoverBorderColor: `{orange.700}`,
           focusRing: {
             color: 'var(--primary-color)',
             shadow: 'none',
           },
         },
         danger: {
-          background: 'var(--error-color)',
-          borderColor: 'var(--error-color)',
+          background: 'var(--error-red-color)',
+          borderColor: 'var(--error-red-color)',
+          hoverBackground: `{red.700}`,
+          hoverBorderColor: `{red.700}`,
           focusRing: {
             color: 'var(--primary-color)',
             shadow: 'none',
@@ -52,8 +56,10 @@ export const button: ButtonDesignTokens = {
           },
         },
         success: {
-          background: 'var(--green-main)',
-          borderColor: 'var(--green-main)',
+          background: 'var(--safe-green-color)',
+          borderColor: 'var(--safe-green-color)',
+          hoverBackground: `{green.700}`,
+          hoverBorderColor: `{green.700}`,
           focusRing: {
             color: 'var(--primary-color)',
             shadow: 'none',
@@ -62,13 +68,13 @@ export const button: ButtonDesignTokens = {
       },
       text: {
         secondary: {
-          color: 'var(--secondary-text-color)',
+          color: 'var(--text-secondary-color)',
         },
         warn: {
-          color: 'var(--warn-color)',
+          color: 'var(--warn-orange-color)',
         },
         danger: {
-          color: 'var(--error-color)',
+          color: 'var(--error-red-color)',
         },
       },
       outlined: {
@@ -77,16 +83,16 @@ export const button: ButtonDesignTokens = {
           borderColor: 'var(--primary-color)',
         },
         secondary: {
-          color: 'var(--secondary-text-color)',
-          borderColor: 'var(--secondary-text-color)',
+          color: 'var(--text-secondary-color)',
+          borderColor: 'var(--text-secondary-color)',
         },
         warn: {
-          color: 'var(--warn-color)',
-          borderColor: 'var(--warn-color)',
+          color: 'var(--warn-orange-color)',
+          borderColor: 'var(--warn-orange-color)',
         },
         danger: {
-          color: 'var(--error-color)',
-          borderColor: 'var(--error-color)',
+          color: 'var(--error-red-color)',
+          borderColor: 'var(--error-red-color)',
         },
       },
     },

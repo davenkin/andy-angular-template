@@ -459,53 +459,90 @@
   <h1 class="section-title">Text color</h1>
   <section class="text-color-section">
     <div class="text-color-item">
-      <span style="color: var(--primary-text-color); font-size: 20px; font-weight: 700">Primary</span>
-      var(--primary-text-color)
+      <span style="color: var(--text-primary-color); font-size: 20px; font-weight: 700">Primary</span>
+      var(--text-primary-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--emphasised-text-color); font-size: 20px; font-weight: 700">Emphasised</span>
-      var(--emphasised-text-color)
+      <span style="color: var(--text-emphasis-color); font-size: 20px; font-weight: 700">Emphasised</span>
+      var(--text-emphasis-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--secondary-text-color); font-size: 20px; font-weight: 700">Secondary</span>
-      var(--secondary-text-color)
+      <span style="color: var(--text-secondary-color); font-size: 20px; font-weight: 700">Secondary</span>
+      var(--text-secondary-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--placeholder-text-color); font-size: 20px; font-weight: 700">Placeholder</span>
-      var(--placeholder-text-color)
+      <span style="color: var(--text-tertiary-color); font-size: 20px; font-weight: 700">Tertiary</span>
+      var(--text-tertiary-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--success-color); font-size: 20px; font-weight: 700">Success</span>
-      var(--success-color)
+      <span style="color: var(--text-light-color); font-size: 20px; font-weight: 700">Light</span>
+      var(--text-light-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--warn-color); font-size: 20px; font-weight: 700">Warn</span>
-      var(--warn-color)
+      <span style="color: var(--safe-green-color); font-size: 20px; font-weight: 700">Success</span>
+      var(--safe-green-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--error-color); font-size: 20px; font-weight: 700">Error</span>
-      var(--error-color)
+      <span style="color: var(--warn-orange-color); font-size: 20px; font-weight: 700">Warn</span>
+      var(--warn-orange-color)
+    </div>
+    <div class="text-color-item">
+      <span style="color: var(--error-red-color); font-size: 20px; font-weight: 700">Error</span>
+      var(--error-red-color)
     </div>
   </section>
 
-  <h1 id="color-section" class="section-title">Content background color</h1>
+  <h1 id="color-section" class="section-title">Background color</h1>
   <section class="common-color-section">
     <div class="common-color-item width-250">
-      <div class="common-color-legend" [style]="`background: var(--light-background-color)`"></div>
-      <div>var(--light-background-color)</div>
+      <div class="common-color-legend" [style]="`background: var(--bg-dark-color)`"></div>
+      <div>var(--bg-dark-color)</div>
+      <div>Dark</div>
+    </div>
+
+    <div class="common-color-item width-250">
+      <div class="common-color-legend" [style]="`background: var(--bg-primary-color)`"></div>
+      <div>var(--bg-primary-color)</div>
+      <div>Primary</div>
+    </div>
+
+    <div class="common-color-item width-250">
+      <div class="common-color-legend" [style]="`background: var(--bg-light-color)`"></div>
+      <div>var(--bg-secondary-color)</div>
+      <div>Secondary</div>
+    </div>
+
+    <div class="common-color-item width-250">
+      <div class="common-color-legend" [style]="`background: var(--bg-light-color)`"></div>
+      <div>var(--bg-light-color)</div>
       <div>Light</div>
     </div>
+  </section>
 
+  <h1 class="section-title">Line color</h1>
+  <section class="common-color-section">
     <div class="common-color-item width-250">
-      <div class="common-color-legend" [style]="`background: var(--medium-background-color)`"></div>
-      <div>var(--medium-background-color)</div>
-      <div>Medium</div>
+      <div class="line-color-legend" [style]="`background: var(--line-dark-color)`"></div>
+      <div>var(--line-dark-color)</div>
+      <div>Dark</div>
     </div>
 
     <div class="common-color-item width-250">
-      <div class="common-color-legend" [style]="`background: var(--heavy-background-color)`"></div>
-      <div>var(--heavy-background-color)</div>
-      <div>Heavy</div>
+      <div class="line-color-legend" [style]="`background: var(--line-primary-color)`"></div>
+      <div>var(--line-primary-color)</div>
+      <div>Primary</div>
+    </div>
+
+    <div class="common-color-item width-250">
+      <div class="line-color-legend" [style]="`background: var(--line-secondary-color)`"></div>
+      <div>var(--line-secondary-color)</div>
+      <div>Secondary</div>
+    </div>
+
+    <div class="common-color-item width-250">
+      <div class="line-color-legend" [style]="`background: var(--line-light-color)`"></div>
+      <div>var(--line-light-color)</div>
+      <div>Light</div>
     </div>
   </section>
 

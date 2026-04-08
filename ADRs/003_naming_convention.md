@@ -21,7 +21,7 @@ We follow the below naming conventions:
 | Files containing data models            | xxx.model.ts         | `common.model.ts`            | Contains common data models shared across the whole application  |
 | CSS classes                             | xxx-yyy              | `main-content`               | Use all lowercases with dashes                                   |
 | CSS classes for assisting PrimeNG       | pa-xxx               | `pa-dialog-footer`           | Your own CSS selectors that work together with PrimeNG selectors |
-| CSS variables                           | --xxx-yyy            | `--primary-text-color`       | Use all lowercases with dashes                                   |
+| CSS variables                           | --xxx-yyy            | `--text-primary-color`       | Use all lowercases with dashes                                   |
 | JS class names                          | AbcXyz               | `DeviceListPage`             |                                                                  |
 | JS variable names                       | abcXyz               | `currentState`               |                                                                  |
 | Utility class file names                | xxx.utils.ts         | `pagination.utils.ts`        |                                                                  |

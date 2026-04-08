@@ -46,16 +46,16 @@ export class DialogService {
     const finalSize = size ?? 'medium';
     switch (finalSize) {
       case 'small': {
-        return 'var(--436px)';
+        return 'var(--dialog-small-width)';
       }
       case 'medium': {
-        return 'var(--572px)';
+        return 'var(--dialog-medium-width)';
       }
       case 'large': {
-        return 'var(--864px)';
+        return 'var(--dialog-large-width)';
       }
       case 'x-large': {
-        return 'var(--1110px)';
+        return 'var(--dialog-xlarge-width)';
       }
     }
   }
