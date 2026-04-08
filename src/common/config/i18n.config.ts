@@ -15,6 +15,7 @@ import localeZh from '@angular/common/locales/zh';
 import { registerLocaleData } from '@angular/common';
 import { PrimeNG } from 'primeng/config';
 import { all as PrimeLocals, AllLocales } from 'primelocale';
+import { Title } from '@angular/platform-browser';
 
 registerLocaleData(localeZh, 'zh-CN');
 
@@ -27,11 +28,14 @@ export function provideI18n(): EnvironmentProviders {
       const primeNG = inject(PrimeNG);
       const currentContext = inject(CurrentContextService);
       const document = inject(DOCUMENT);
+      const title = inject(Title);
+
       translate.setTranslation('zh', zhTranslation);
       translate.setTranslation('en', enTranslation);
       effect(() => {
         document.documentElement.lang = currentContext.locale();
         translate.use(currentContext.language());
+        title.setTitle(translate.instant('APP_NAME'));
         primeNG.setTranslation(PrimeLocals[currentContext.locale() as keyof AllLocales]);
       });
     }),

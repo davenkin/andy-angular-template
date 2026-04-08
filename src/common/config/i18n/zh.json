@@ -1,10 +1,15 @@
 {
+  "APP_NAME": "Andy Angular 模板工程",
   "ALL": "所有",
+  "OK": "确定",
+  "CLOSE": "关闭",
+  "CANCEL": "取消",
+  "CHOOSE_ORG": "选择组织",
+  "CHOOSE_LANG": "选择语言",
+  "CLOSE_DIALOG": "关闭对话框",
+  "ACCESS_DENIED": "无权访问",
   "CURRENT_ORG": "当前组织",
   "LANGUAGE": "语言",
-  "DEVICE_NAME": "设备名称",
-  "OS_TYPE": "系统类型",
-  "CPU_ARCHITECTURE": "处理器类型",
   "TABLE": {
     "EMPTY_PLACEHOLDER": "无数据"
   },
@@ -12,13 +17,9 @@
     "SELECTION_SUMMARY": "共{{total}}条，已选中{{selectedCount}}条",
     "TOTAL_SUMMARY": "共{{total}}条"
   },
-  "CANCEL": "取消",
-  "OK": "确定",
-  "CLOSE": "关闭",
-  "CHOOSE_ORG": "选择组织",
-  "CHOOSE_LANG": "选择语言",
-  "CLOSE_DIALOG": "关闭对话框",
-  "ACCESS_DENIED": "无权访问",
+  "DEVICE_NAME": "设备名称",
+  "OS_TYPE": "系统类型",
+  "CPU_ARCHITECTURE": "处理器类型",
   "ENUM": {
     "OS_TYPE": {
       "WINDOWS": "Windows",
