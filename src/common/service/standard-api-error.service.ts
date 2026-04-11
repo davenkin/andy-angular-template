@@ -7,6 +7,7 @@ import { StandardApiError } from 'common/model/common.model';
 
 @Injectable({ providedIn: 'root' })
 export class StandardApiErrorService {
+  private static readonly DEFAULT_EXCLUDED_ERROR_CODES = ['ACCESS_DENIED'];
   private translate = inject(TranslateService);
   private toastService = inject(ToastService);
 
@@ -16,6 +17,11 @@ export class StandardApiErrorService {
     }
 
     const apiError = standardApiErrorOf(response) as StandardApiError;
+
+    if (StandardApiErrorService.DEFAULT_EXCLUDED_ERROR_CODES.includes(apiError.code)) {
+      return;
+    }
+
     if (excludedErrorCodes?.includes(apiError.code)) {
       return;
     }
