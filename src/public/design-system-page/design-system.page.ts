@@ -11,6 +11,7 @@ import { DemoDialogComponent } from 'public/design-system-page/demo-dialog/demo-
 import { take } from 'rxjs';
 import { DemoDeviceListComponent } from 'public/design-system-page/demo-device/list/demo-device-list.component';
 import { PaginatorComponent } from 'common/component/paginator/paginator.component';
+import { LocaleSwitcherComponent } from 'common/component/locale-switcher/locale-switcher.component';
 
 @Component({
   selector: 'app-design-system-page',
@@ -27,6 +28,7 @@ import { PaginatorComponent } from 'common/component/paginator/paginator.compone
     DemoDeviceListComponent,
     PaginatorComponent,
     ButtonIcon,
+    LocaleSwitcherComponent,
   ],
 })
 export class DesignSystemPage {

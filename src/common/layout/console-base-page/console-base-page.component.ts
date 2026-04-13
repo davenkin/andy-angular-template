@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CurrentContextService, CurrentOrg } from 'common/service/current-context.service';
+import { CurrentContextService } from 'common/service/current-context.service';
 import { SpinnerService } from 'common/service/spinner.service';
 import { random } from 'lodash-es';
 import { take, timer } from 'rxjs';
+import { CurrentOrg } from 'common/model/common.model';
 
 @Component({
   selector: 'app-console-base-page',

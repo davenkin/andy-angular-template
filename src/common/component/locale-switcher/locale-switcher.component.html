@@ -1,0 +1,13 @@
+<p-floatlabel variant="on">
+  <p-select
+    inputId="locale-switcher-input"
+    [options]="allLocales"
+    [(ngModel)]="currentLocale"
+    class="the-select"
+    optionLabel="localeName"
+    optionValue="localeCode"
+    (onChange)="changeLocale()"
+    [placeholder]="'CHOOSE_LANG' | translate"
+  />
+  <label for="locale-switcher-input">{{ 'LANGUAGE' | translate }}</label>
+</p-floatlabel>

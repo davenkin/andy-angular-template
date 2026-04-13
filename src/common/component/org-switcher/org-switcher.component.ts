@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { Select, SelectChangeEvent } from 'primeng/select';
 import { FormsModule } from '@angular/forms';
-import { CurrentContextService, CurrentOrg } from 'common/service/current-context.service';
+import { CurrentContextService } from 'common/service/current-context.service';
 import { random } from 'lodash-es';
 import { FloatLabel } from 'primeng/floatlabel';
 import { TranslatePipe } from '@ngx-translate/core';
+import { CurrentOrg } from 'common/model/common.model';
 
 @Component({
   selector: 'app-org-switcher',

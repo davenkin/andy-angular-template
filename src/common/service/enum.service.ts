@@ -16,7 +16,7 @@ export class EnumService {
 
   constructor() {
     effect(() => {
-      void this.currentContextService.language();
+      void this.currentContextService.locale();
       this.buildNames();
     });
   }
@@ -31,6 +31,7 @@ export class EnumService {
       OS_TYPE_NAMES.set(it, this.translate.instant('ENUM.OS_TYPE.' + it));
     });
   }
+
   private buildCpuArchitectureNames() {
     Object.values(CpuArchitecture).forEach((it) => {
       CPU_ARCHITECTURE_NAMES.set(it, this.translate.instant('ENUM.CPU_ARCHITECTURE.' + it));

@@ -6,27 +6,27 @@ import { FloatLabel } from 'primeng/floatlabel';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-language-switcher',
-  templateUrl: './language-switcher.component.html',
-  styleUrl: './language-switcher.component.scss',
+  selector: 'app-locale-switcher',
+  templateUrl: './locale-switcher.component.html',
+  styleUrl: './locale-switcher.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [Select, FormsModule, FloatLabel, TranslatePipe],
 })
-export class LanguageSwitcherComponent {
+export class LocaleSwitcherComponent {
   private currentContextService = inject(CurrentContextService);
-  protected currentLanguage = signal(this.currentContextService.language());
-  protected languages = [
+  protected currentLocale = signal(this.currentContextService.locale());
+  protected allLocales = [
     {
-      languageCode: 'zh',
-      languageName: '中文',
+      localeCode: 'zh-CN',
+      localeName: '中文',
     },
     {
-      languageCode: 'en',
-      languageName: 'English',
+      localeCode: 'en',
+      localeName: 'English',
     },
   ];
 
-  protected changeLanguage() {
-    this.currentContextService.changeLanguage(this.currentLanguage());
+  protected changeLocale() {
+    this.currentContextService.changeLocale(this.currentLocale());
   }
 }

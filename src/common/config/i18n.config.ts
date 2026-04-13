@@ -8,7 +8,7 @@ import {
   provideAppInitializer,
 } from '@angular/core';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
-import zhTranslation from 'common/config/i18n/zh.json';
+import zhCnTranslation from 'common/config/i18n/zh-CN.json';
 import enTranslation from 'common/config/i18n/en.json';
 import { CurrentContextService } from 'common/service/current-context.service';
 import localeZh from '@angular/common/locales/zh';
@@ -22,7 +22,7 @@ registerLocaleData(localeZh, 'zh-CN');
 export function provideI18n(): EnvironmentProviders {
   return makeEnvironmentProviders([
     { provide: LOCALE_ID, useValue: 'zh-CN' }, //This is just the default locale, use CurrentContextService.locale() to get the real locale dynamically
-    provideTranslateService({ lang: 'zh' }),
+    provideTranslateService({ lang: 'zh-CN' }),
     provideAppInitializer(() => {
       const translate = inject(TranslateService);
       const primeNG = inject(PrimeNG);
@@ -30,11 +30,11 @@ export function provideI18n(): EnvironmentProviders {
       const document = inject(DOCUMENT);
       const title = inject(Title);
 
-      translate.setTranslation('zh', zhTranslation);
+      translate.setTranslation('zh-CN', zhCnTranslation);
       translate.setTranslation('en', enTranslation);
       effect(() => {
         document.documentElement.lang = currentContext.locale();
-        translate.use(currentContext.language());
+        translate.use(currentContext.locale());
         title.setTitle(translate.instant('APP_NAME'));
         primeNG.setTranslation(PrimeLocals[currentContext.locale() as keyof AllLocales]);
       });

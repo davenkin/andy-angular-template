@@ -4,7 +4,7 @@ import { SpinnerComponent } from 'common/component/spinner/spinner.component';
 import { CONSOLE_MAIN_SPINNER } from 'common/service/spinner.service';
 import { CurrentContextService } from 'common/service/current-context.service';
 import { ButtonDirective, ButtonLabel } from 'primeng/button';
-import { LanguageSwitcherComponent } from 'common/component/language-switcher/language-switcher.component';
+import { LocaleSwitcherComponent } from 'common/component/locale-switcher/locale-switcher.component';
 import { OrgSwitcherComponent } from 'common/component/org-switcher/org-switcher.component';
 
 @Component({
@@ -18,7 +18,7 @@ import { OrgSwitcherComponent } from 'common/component/org-switcher/org-switcher
     ButtonDirective,
     ButtonLabel,
     RouterLink,
-    LanguageSwitcherComponent,
+    LocaleSwitcherComponent,
     OrgSwitcherComponent,
   ],
 })

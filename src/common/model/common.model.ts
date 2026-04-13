@@ -16,6 +16,17 @@ export interface StandardApiError {
   data: any;
 }
 
+export interface CurrentOrg {
+  id: string;
+  name: string;
+}
+
+export interface CurrentUser {
+  id: string;
+  name: string;
+  email: string;
+}
+
 export interface Option {
   value: string;
   label: string;
