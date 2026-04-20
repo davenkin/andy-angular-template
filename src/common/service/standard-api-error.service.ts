@@ -1,7 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ToastService } from 'common/service/toast.service';
-import { isStandardApiError, standardApiErrorOf } from 'common/utils/common.utils';
 import { HttpErrorResponse } from '@angular/common/http';
 import { StandardApiError } from 'common/model/common.model';
 
@@ -12,11 +11,11 @@ export class StandardApiErrorService {
   private toastService = inject(ToastService);
 
   public showDefaultErrorMessage(response: HttpErrorResponse, excludedErrorCodes?: string[]) {
-    if (!isStandardApiError(response)) {
+    if (!this.isStandardApiError(response)) {
       return;
     }
 
-    const apiError = standardApiErrorOf(response) as StandardApiError;
+    const apiError = this.standardApiErrorOf(response) as StandardApiError;
 
     if (StandardApiErrorService.DEFAULT_EXCLUDED_ERROR_CODES.includes(apiError.code)) {
       return;
@@ -28,5 +27,30 @@ export class StandardApiErrorService {
 
     const messageKey = 'API_DEFAULT_ERROR_MESSAGE.' + apiError.code;
     this.toastService.error(this.translate.instant(messageKey, apiError.data));
+  }
+
+  public isStandardApiError(response: any) {
+    return (
+      response instanceof HttpErrorResponse &&
+      response.error?.error?.type &&
+      response.error?.error?.timestamp &&
+      response.error?.error?.path
+    );
+  }
+
+  public standardApiErrorTypeOf(response: HttpErrorResponse) {
+    if (!this.isStandardApiError(response)) {
+      return null;
+    }
+
+    return response.error.error.type as string;
+  }
+
+  public standardApiErrorOf(response: HttpErrorResponse) {
+    if (!this.isStandardApiError(response)) {
+      return null;
+    }
+
+    return response.error.error as StandardApiError;
   }
 }

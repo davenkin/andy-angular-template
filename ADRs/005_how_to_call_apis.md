@@ -41,7 +41,7 @@ We follow a consistent convention regarding where to put various APIs and data m
 ### How to handle API errors
 When API error occurs, you can show a toast indicating to the user of this error.
 
-- If the error response is `StandardApiError`:
+- If the error response is of type `StandardApiError`:
   - If you only need to show default error messages, then you just need to call `this.standardApiErrorService.showDefaultErrorMessage(errorResponse)`:
     ```typescript
         someApiCall().subscribe({
@@ -60,7 +60,7 @@ When API error occurs, you can show a toast indicating to the user of this error
     ```typescript
         someApiCall().subscribe({
         error: (errorResponse: HttpErrorResponse) => {
-          switch (standardApiErrorTypeOf(errorResponse)) {
+          switch (this.standardApiErrorService.standardApiErrorTypeOf(errorResponse)) {
             case 'EQUIPMENT_NAME_ALREADY_EXISTS': {
               this.toastService.error(this.translate.instant('SOME_KEY.EQUIPMENT_NAME_ALREADY_EXISTS'));
               break;
@@ -72,7 +72,7 @@ When API error occurs, you can show a toast indicating to the user of this error
         },
       });
     ```
-- If the error response is not `StandardApiError`, you need to handle it some other ways.
+- If the error response is not of type `StandardApiError`, you need to handle it some other ways.
 - For some global API errors that need to always show a toast to the user, the `apiResponseErrorInterceptor` handles this automatically, for example for `403: Access denied` error:
   ```typescript
   return next(req).pipe(
