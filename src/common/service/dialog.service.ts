@@ -7,10 +7,11 @@ import { TranslateService } from '@ngx-translate/core';
 export type DialogSize = 'small' | 'medium' | 'large' | 'x-large';
 
 export interface DialogSetting {
-  header: string;
+  header?: string;
   size?: DialogSize;
   data?: any;
   inputValues?: Record<string, any>;
+  showHeader?: boolean;
 }
 
 export enum DialogCloseResult {
@@ -37,6 +38,7 @@ export class DialogService {
       width: this.widthOfSize(setting.size),
       data: setting.data,
       inputValues: setting.inputValues,
+      showHeader: setting.showHeader === undefined ? true : setting.showHeader,
     }) as DynamicDialogRef;
     dialogRef.onDestroy.pipe(take(1)).subscribe(() => this.focusService.pop());
     return dialogRef;
